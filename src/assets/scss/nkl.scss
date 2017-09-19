@@ -1,0 +1,100 @@
+html {margin:0; padding:0; box-sizing:border-box;}
+*, *:after, *:before {box-sizing:inherit;}
+
+
+@import "variables";
+@import "transitions";
+
+body {
+  margin:0; padding:0;
+  font-family: $font-main;
+  //color: white;
+  //background-color: #ccc;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-special;
+  font-weight: normal;
+}
+
+img {
+  border:0;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid lighten($nkl-gray, 15%);
+  margin: 1rem 0;
+}
+
+.nkl-viewContainer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5vh;
+
+  @include mq-m {
+    padding-bottom: 0;
+  }
+  @include mq-l {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 2vmin;
+  }
+}
+
+.nkl-font--special {
+  font-family: $font-special;
+}
+
+.nkl-btn {
+  padding: $nkl-s $nkl-l;
+  margin: $nkl-xs;
+  background-color: hsl(191, 62%, 33%);
+  color: white;
+  font-size: $nkl-m;
+  border: none;
+  border-radius: $nkl-5xs;
+  box-shadow: 0 0 4px 0px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease;
+
+  &:hover {
+    background-color: $nkl-green--map;
+    box-shadow: 0 2px 6px 0px rgba(0,0,0,0.3);
+  }
+
+  &.small {
+    font-size: $nkl-xs;
+  }
+  &.large {
+    font-size: $nkl-xl;
+  }
+  &.huge {
+    font-size: $nkl-xxxl;
+  }
+}
+
+.nkl-btn--disabled {
+  //background: #000;
+  //display: none;
+  text-decoration: line-through;
+  transition: opacity 1.2s ease-in;
+  opacity: 0.2;
+  pointer-events:none;
+}
+
+.nkl-label {
+  background: black;
+  border-radius: 6px;
+  color: white;
+  padding: 5px 8px;
+  //transform: translate(-100px, 34px) rotateZ(-7deg);
+}
+
+.nkl-important {
+  color: $nkl-yellow--pale;
+}
