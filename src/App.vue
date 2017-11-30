@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <nkl-sentence :currentSentence="this.gameData[gameIndex]"></nkl-sentence>
-    <nkl-score :score="this.gameScore"></nkl-score>
+    <component :is="currentView" :gd="gameData" :gi="gameIndex"></component>
+    <!--<nkl-sentence :currentSentence="this.gameData[gameIndex]"></nkl-sentence>
+    <nkl-score :score="this.gameScore"></nkl-score>-->
   </div>
 </template>
 
 <script>
 
   import {eventBus} from "./main";
+  import Intro from "./components/Intro.vue";
   import GameScore from "./components/GameScore.vue";
   import Sentence from "./components/Sentence.vue";
 
@@ -15,6 +17,7 @@ export default {
     name: 'app',
     data () {
       return {
+        currentView: "nkl-intro",
         gameScore : 50,
         gameData: eventBus.shuffle(eventBus.gameData),
         gameIndex: 0,
@@ -22,6 +25,7 @@ export default {
       }
     },
     components : {
+      "nkl-intro": Intro,
       "nkl-score": GameScore,
       "nkl-sentence" : Sentence
     },

@@ -1,7 +1,7 @@
 <template>
   <div class="nkl-sentences-container">
     <transition name="fade" mode="out-in">
-    <div v-if="itemFound">
+    <!--<div v-if="itemFound">
       <h2>
         {{this.currentSentence.start}}
         <span style="color:blue;">{{this.currentSentence.aavik}}</span>
@@ -13,12 +13,13 @@
         {{this.currentSentence.end}}
       </h3>
       <button class="nkl-button">Edasi</button>
-    </div>
-    <div v-else class="nkl-sentence">
+    </div>-->
+    <div class="nkl-sentence">
       <span class="nkl-sentence-start">{{this.currentSentence.start}}</span>
       <span class="nkl-sentence-chooser">
         <nkl-sentence-option
           v-for="choice in choices"
+          :key="choice"
           :word="choice"
           :right="rightChoice"
           :current="currentChoice"
@@ -115,8 +116,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
-    font-size: $nkl-xxl;
+    font-family: $font-main, cursive;
+    font-size: $nkl-xxxl;
   }
   .nkl-sentence-chooser {
     display: flex;
