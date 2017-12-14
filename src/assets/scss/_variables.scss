@@ -3,7 +3,7 @@ $mq-m: 640px;
 $mq-l: 1024px;
 $mq-xl: 1600px;
 
-$font-main: 'Roboto Slab', sans-serif;
+$font-main: 'Noto Serif', sans-serif;
 $font-special: 'Meie Script', cursive;
 
 $nkl-unit: 1rem;
@@ -23,14 +23,13 @@ $nkl-xxxs  : $nkl-xxs / $nkl-unit-multiplier;
 $nkl-4xs   : $nkl-xxxs / $nkl-unit-multiplier;
 $nkl-5xs   : $nkl-4xs / $nkl-unit-multiplier;
 
-$nkl-yellow--pale: hsl(54, 57%, 53%);
+$nkl-yellow--pale: hsl(52, 82%, 74%);
+$nkl-brown--dark: hsl(27, 38%, 14%);
 $nkl-gray: hsl(223, 13%, 25%);
 $nkl-gray--dark: hsl(223, 13%, 20%);
 $nkl-gray--darkest: hsl(220, 13%, 18%);
 $nkl-black: hsl(0, 0%, 5%);
 $nkl-white: hsl(0, 0%, 85%);
-$nkl-blue--map: hsl(179, 93%, 28%);
-$nkl-green--map: hsl(96, 67%, 43%);
 
 @mixin calc($key, $value) {
   #{$key}: -webkit-calc(#{$value});
@@ -55,6 +54,55 @@ $nkl-green--map: hsl(96, 67%, 43%);
 }
 @mixin mq-xl {
   @media (min-width: #{$mq-xl}) {
+    @content;
+  }
+}
+
+@mixin mq-s-portrait {
+  @media (min-width: #{$mq-s}) and (orientation: portrait)  {
+    @content;
+  }
+}
+@mixin mq-m-portrait {
+  @media (min-width: #{$mq-m}) and (orientation: portrait)  {
+    @content;
+  }
+}
+@mixin mq-l-portrait {
+  @media (min-width: #{$mq-l}) and (orientation: portrait) {
+    @content;
+  }
+}
+@mixin mq-xl-portrait {
+  @media (min-width: #{$mq-xl}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mq-s-landscape {
+  @media (min-width: #{$mq-s}) and (orientation: landscape)  {
+    @content;
+  }
+}
+@mixin mq-m-landscape {
+  @media (min-width: #{$mq-m}) and (orientation: landscape)  {
+    @content;
+  }
+}
+@mixin mq-l-landscape {
+  @media (min-width: #{$mq-l}) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin mq-xl-landscape {
+  @media (min-width: #{$mq-xl}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+
+@mixin mq-landscape {
+  @media (orientation: landscape)  {
     @content;
   }
 }
