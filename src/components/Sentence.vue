@@ -1,5 +1,5 @@
 <template>
-  <div class="nkl-sentences-container">
+  <div class="nkl-sentences__container">
     <transition name="fade" mode="out-in">
     <!--<div v-if="itemFound">
       <h2>
@@ -28,8 +28,13 @@
       </span>
       <span class="nkl-sentence-end">{{this.currentSentence.end}}.</span>
     </div>
-
     </transition>
+
+    <a
+      class="nkl-sentence__back-button"
+      @click="cancelGame"
+    >&laquo; välju mängust</a>
+
   </div>
 </template>
 
@@ -76,6 +81,9 @@
         }
         this.choices = eventBus.shuffle(this.choices);
         this.rightChoice = this.currentSentence.aavik;
+      },
+      cancelGame(){
+        eventBus.changeView("nkl-intro");
       }
     },
     created(){
@@ -105,12 +113,19 @@
   @import "../assets/scss/_variables.scss";
 
 
-  .nkl-sentences-container {
+  .nkl-sentences__container {
     display: flex;
     justify-content: center;
     align-items: center;
     height:100vh;
+    background-color: hsl(51, 69%, 85%);
+    background-image:
+      linear-gradient(90deg, transparent 5%, hsl(0, 0%, 74%) 5%, hsl(0, 0%, 74%) 5.15%, transparent 5.15%),
+      linear-gradient(90deg, transparent 92%, hsl(348, 84%, 74%) 92%, hsl(348, 84%, 74%) 92.15%, transparent 92.15%),
+      linear-gradient(hsl(0, 0%, 80%) .085rem, transparent .085rem);
+    background-size: 100% 5vh;
   }
+
   .nkl-sentence {
     display: flex;
     justify-content: center;
@@ -134,6 +149,17 @@
   nkl-sentence-option {
     padding: $nkl-l;
     cursor: pointer;
+  }
+
+  .nkl-sentence__back-button {
+    position: absolute;
+    top: 3vh;
+    left: 4vh;
+    padding: $nkl-xxs $nkl-s;
+    font-family: $font-special;
+    color: $nkl-brown--dark;
+    font-size: $nkl-xxl;
+    //border-bottom: 1px dotted $nkl-brown--dark;
   }
 
 </style>

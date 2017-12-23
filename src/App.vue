@@ -1,8 +1,18 @@
 <template>
   <div id="app">
-    <component :is="currentView" :gd="gameData" :gi="gameIndex"></component>
-    <!--<nkl-sentence :currentSentence="this.gameData[gameIndex]"></nkl-sentence>
-    <nkl-score :score="this.gameScore"></nkl-score>-->
+    <!-- <component :is="currentView" :gd="gameData" :gi="gameIndex"></component> -->
+    <!-- <nkl-sentence :currentSentence="this.gameData[gameIndex]"></nkl-sentence>
+    <nkl-score :score="this.gameScore"></nkl-score> -->
+    <transition name="fade" mode="out-in">
+      <nkl-intro v-if=" currentView === 'nkl-intro' "></nkl-intro>
+      <div v-else-if=" currentView === 'nkl-game' " class="nkl-game__container">
+        <nkl-sentence :currentSentence="this.gameData[gameIndex]"></nkl-sentence>
+        <nkl-score :score="this.gameScore"></nkl-score>
+      </div>
+    </transition>
+
+
+
   </div>
 </template>
 
@@ -57,8 +67,6 @@ export default {
     //font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-
   }
 
   h1, h2 {
@@ -77,8 +85,13 @@ export default {
 
   a {
     color: #42b983;
+    cursor: pointer;
   }
 
+  .nkl-game__container {
+    width: 100vw;
+    height: 100vh;
+  }
 
 
 </style>

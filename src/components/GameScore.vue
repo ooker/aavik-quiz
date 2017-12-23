@@ -31,8 +31,11 @@
         int = setInterval(function(){
           if(vm.score == vm.newScore){
             clearInterval(int);
-            vm.alertMe = false;
-            vm.praiseMe = false;
+            setTimeout(function(){
+              vm.alertMe = false;
+              vm.praiseMe = false;
+            }, 500);
+
           } else {
             if(vm.score > vm.newScore){
               vm.newScore++;
@@ -66,26 +69,30 @@
     justify-content: center;
     align-items: center;
 
-    font-family: $font-special;
+    font-family: $font-main;
     font-size: 2rem;
     line-height: 1;
     color: $nkl-white;
 
-    border: 3px $nkl-yellow--pale solid;
-    background: rgba(0, 0, 0, 0.8);
+    //border: 3px $nkl-yellow--pale solid;
+    background: hsla(0, 0%, 0%, 0.8);
     transition: all 1s;
   }
 
   .alert {
-      background: rgb(170, 57, 15);
-      width: 5.6rem;
-      height: 5.6rem;
-      transition: all .75s;
-  }
-  .success {
-    background: rgb(15, 170, 26);
+    background: hsl(16, 83%, 36%);
     width: 5.6rem;
     height: 5.6rem;
+    top: 15%;
+    right: 15%;
+    transition: all .75s;
+  }
+  .success {
+    background: hsl(124, 83%, 36%);
+    width: 5.6rem;
+    height: 5.6rem;
+    top: 15%;
+    right: 15%;
     transition: all .75s;
   }
 

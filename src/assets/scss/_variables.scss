@@ -3,7 +3,7 @@ $mq-m: 640px;
 $mq-l: 1024px;
 $mq-xl: 1600px;
 
-$font-main: 'Noto Serif', sans-serif;
+$font-main: 'Lora', sans-serif;
 $font-special: 'Meie Script', cursive;
 
 $nkl-unit: 1rem;
@@ -25,6 +25,7 @@ $nkl-5xs   : $nkl-4xs / $nkl-unit-multiplier;
 
 $nkl-yellow--pale: hsl(52, 82%, 74%);
 $nkl-brown--dark: hsl(27, 38%, 14%);
+$nkl-blue: hsla(180, 61%, 24%, 1);
 $nkl-gray: hsl(223, 13%, 25%);
 $nkl-gray--dark: hsl(223, 13%, 20%);
 $nkl-gray--darkest: hsl(220, 13%, 18%);

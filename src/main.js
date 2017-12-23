@@ -1,7 +1,11 @@
 require("./assets/scss/nkl.scss");
 
 import Vue from 'vue'
+import Vuebar from 'vuebar';
+Vue.use(Vuebar);
 import App from './App.vue'
+
+
 
 
 
@@ -13,9 +17,22 @@ const gameData = [
     "end" : "kass",
     "translation" : "kena",
     "options" : [
-      "munav",
+      "nuune",
       "tulnis",
-      "liuge"
+      "maljas"
+    ],
+    "itemFound" : false
+  },
+  // rümu, rümud
+  {
+    "start" : "Igasugu",
+    "aavik" : "rümusid",
+    "end" : "ei maksa uskuda.",
+    "translation" : "kuulujutte",
+    "options" : [
+      "kuulakaid",
+      "sosse",
+      "hõlinaid"
     ],
     "itemFound" : false
   },
@@ -28,6 +45,32 @@ const gameData = [
       "nüüge",
       "velbas",
       "seerduv"
+    ],
+    "itemFound" : false
+  },
+  // vüün, vüünu, vüünu
+  {
+    "start" : "Ma ei ole juba kaks",
+    "aavik" : "vüünu",
+    "end" : "maganud",
+    "translation" : "ööpäeva",
+    "options" : [
+      "ööpsi",
+      "päevööd",
+      "pöövi"
+    ],
+    "itemFound" : false
+  },
+  // taav, taavi, taavi
+  {
+    "start" : "",
+    "aavik" : "Taav",
+    "end" : "naeris filmi vaadates, nii et pisar silmas.",
+    "translation" : "Vanaisa",
+    "options" : [
+      "Kaadu",
+      "Iisu",
+      "Pööp"
     ],
     "itemFound" : false
   }

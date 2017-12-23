@@ -7,18 +7,26 @@
         <!-- Linn -->
         <div class="nkl-parallax__layer" data-depth="-0.1">
           <div class="nkl-parallax__item" style="top:10%; right:10%;">
-            <!-- <img
-              style="width:35vw; height: auto;"
-              srcset="../assets/intro/linn_lg.png 1000w"
-              sizes="(max-width: 1200px) 1000px,
-              600px"
-              src="../assets/intro/linn.png" alt="Kuressaare gümnaasium 20. saj. alguses" /> -->
+
               <img
                 style="width:35vw; height: auto;"
                 src="../assets/intro/linn.jpg"
                 srcset="../assets/intro/linn.jpg 500w, ../assets/intro/linn_lg.jpg 900w"
                 sizes="35vw"
                 alt="Kuressaare gümnaasium 20. saj. alguses"
+              >
+          </div>
+        </div>
+
+        <!-- Neiu -->
+        <div class="nkl-parallax__layer" data-depth="-0.05">
+          <div class="nkl-parallax__item" style="top:36%; right:15%;">
+            <img
+                style="width:12vw; height: auto;"
+                src="../assets/intro/neiu.png"
+                srcset="../assets/intro/neiu.png 200w, ../assets/intro/neiu_lg.png 300w"
+                sizes="12vw"
+                alt="Johannese unistuste neiu"
               >
           </div>
         </div>
@@ -84,10 +92,22 @@
         <!-- Tekstid -->
         <div class="nkl-parallax__layer nkl-intro__texts" data-depth="0.12">
           <div class="nkl-parallax__item" style="top:22%; left:10vw;">
-            <a href="#"><h2>elu</h2></a>
+            <nkl-modal-launcher
+              word="elu"
+              subject="life"
+              @modalLauncherClicked="openModal"></nkl-modal-launcher>
           </div>
           <div class="nkl-parallax__item" style="top:17%; left:40vw;">
-            <a href="#"><h2>töö</h2></a>
+            <nkl-modal-launcher
+              word="töö"
+              subject="work"
+              @modalLauncherClicked="openModal"></nkl-modal-launcher>
+          </div>
+          <div class="nkl-parallax__item" style="top:59%; left:43vw;">
+            <nkl-modal-launcher
+              word="sõnad"
+              subject="work"
+              @modalLauncherClicked="openModal"></nkl-modal-launcher>
           </div>
         </div>
 
@@ -95,24 +115,43 @@
 
     </div><!-- .nkl-intro__room -->
 
+
+
     <div class="nkl-intro__sign">
       <div class="nkl-intro__sign-info">
         <h1 class="nkl-intro__sign-heading"><span>Johannes</span><span>Aavik</span></h1>
         <hr />
         <p class="nkl-intro__sign-subheading">
-          KEELEUUENDAJA
+        Sõnade leiutaja
         </p>
+      </div>
+
+      <div class="nkl-intro__sign-launcher">
+          <a class="nkl-intro__sign-launcher__button"
+            @click="openModal('game')"
+          >Sõnamäng</a>
       </div>
 
       <div class="nkl-intro__sign-nav">
           <nav>
               <ul>
-                <a href="#"><li>elu</li></a>
+                <a  @click="openModal('game')"><li>elu</li></a>
               </ul>
           </nav>
       </div>
 
     </div><!-- .nkl-intro__sign -->
+
+
+
+    <transition name="fade">
+      <nkl-modal
+        v-if="activeSubject"
+        :modalTitle="getSubject.title"
+        :modalContent="getSubject.content"
+        @modalCloserClicked="closeModal"
+      ></nkl-modal>
+    </transition>
 
   </div> <!-- .nkl-intro -->
 </template>
@@ -132,18 +171,72 @@ SCRIPT _____________________________________________________________________
 <script>
   const Parallax = require('parallax-js');
 
+  import Modal from "../components/Modal.vue";
+  import ModalLauncher from "../components/ModalLauncher.vue";
+
   export default {
-    props: ["gameData", "gameIndex"],
+    //props: ["gameData", "gameIndex"],
     data(){
       return {
-        message : "Intro here"
+        activeSubject : false,
+        modals: {
+          "life" : {
+            "title" : "About life",
+            "content" : "About life text here"
+          },
+          "work" : {
+            "title" : "About work",
+            "content" : `
+                About work text here
+                <br />
+                <b>Maybe some HTML</b> too
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ex sapien. Sed suscipit molestie iaculis. Pellentesque pellentesque pellentesque metus sit amet sodales. Pellentesque non nibh non ante posuere accumsan ac id ante. Donec luctus neque in mauris ornare, ac dignissim leo aliquam. Fusce consequat consectetur sapien et tempor. Aenean sed molestie leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin commodo neque eu nunc malesuada bibendum. Ut iaculis libero non nunc tempor aliquam. Nunc ut tincidunt massa. Cras sagittis semper massa, vel venenatis purus pretium ac. Sed auctor feugiat augue, et sodales nibh bibendum et. Cras imperdiet quam dui, eu faucibus lacus vestibulum ac.</p>
+                <p>
+Praesent rutrum ante eget urna pretium, nec cursus odio interdum. In fringilla luctus leo, eu iaculis lacus posuere vel. Donec eu molestie nisi. Nunc dapibus quam non mauris posuere sodales. Fusce id metus luctus magna dapibus blandit. Suspendisse tempor ac dolor in varius. Aliquam sagittis consectetur urna, euismod facilisis nisi vulputate eget. Etiam vehicula eros nec scelerisque porttitor. Cras gravida congue leo, ac porttitor augue dictum eget. Praesent porta, mauris vitae blandit venenatis, sapien lectus malesuada lacus, id dictum nulla dolor nec elit.
+                </p>
+                <p>
+Praesent rutrum ante eget urna pretium, nec cursus odio interdum. In fringilla luctus leo, eu iaculis lacus posuere vel. Donec eu molestie nisi. Nunc dapibus quam non mauris posuere sodales. Fusce id metus luctus magna dapibus blandit. Suspendisse tempor ac dolor in varius. Aliquam sagittis consectetur urna, euismod facilisis nisi vulputate eget. Etiam vehicula eros nec scelerisque porttitor. Cras gravida congue leo, ac porttitor augue dictum eget. Praesent porta, mauris vitae blandit venenatis, sapien lectus malesuada lacus, id dictum nulla dolor nec elit.
+                </p>
+                <p>
+Praesent rutrum ante eget urna pretium, nec cursus odio interdum. In fringilla luctus leo, eu iaculis lacus posuere vel. Donec eu molestie nisi. Nunc dapibus quam non mauris posuere sodales. Fusce id metus luctus magna dapibus blandit. Suspendisse tempor ac dolor in varius. Aliquam sagittis consectetur urna, euismod facilisis nisi vulputate eget. Etiam vehicula eros nec scelerisque porttitor. Cras gravida congue leo, ac porttitor augue dictum eget. Praesent porta, mauris vitae blandit venenatis, sapien lectus malesuada lacus, id dictum nulla dolor nec elit.
+                </p>
+              `
+          },
+          "game" : {
+              "title" : "Pane end proovile",
+              "content" : `
+                  <p>
+                    Mõned Aaviku loodud sõnad, mis ei ole laiemalt kasutusse läinud, tunduvad meile tänapäeval üsna naljakad.
+                  </p>
+                  <p>
+                    Näitame sulle ühte tavalist eestikeelset lauset ja koos sellega erinevaid välja mõeldud sõnavariante. Sinu ülesandeks on proovida meie poolt pakutud vaimusünnitiste seast õige Aaviku leiutatud sõna ära tunda.
+                  </p>
+              `
+          },
+        }
       }
+    },
+    components : {
+      "nkl-modal": Modal,
+      "nkl-modal-launcher": ModalLauncher
     },
     mounted(){
       const scene = document.getElementById('nkl-parallax__scene');
       const parallaxInstance = new Parallax(scene);
     },
+    computed : {
+      getSubject: function() {
+        return this.modals[this.activeSubject];
+      },
+    },
     methods : {
+      openModal(subject) {
+        this.activeSubject = subject;
+      },
+      closeModal() {
+        this.activeSubject = false;
+      }
 
     }
   }
@@ -171,6 +264,8 @@ STYLE _____________________________________________________________________
     // align-items: bottom;
     justify-content: space-between;
     height: 100vh;
+
+    overflow: hidden;
 
     background: $nkl-brown--dark;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23e1be57' fill-opacity='0.32' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
@@ -220,6 +315,7 @@ STYLE _____________________________________________________________________
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 
     width: 100%;
     height: calc(100vh - (100vw*0.45));
@@ -235,37 +331,70 @@ STYLE _____________________________________________________________________
       text-shadow: 1px 3px 0 hsla(0,0,0,0.5);
     }
     &-subheading {
-      margin: 2vh 0 0 0; padding: 0;
-      line-height: 1;
+      margin: 2vh 0 0 0; padding: 0 $nkl-m;
+      line-height: 1.2;
       font-family: $font-main;
-      font-size: 3vw;
+      font-size: $nkl-s;
       font-weight: 400;
+      text-align: center;
       color: $nkl-yellow--pale;
-      letter-spacing: 0.7vw;
+      letter-spacing: 0.5vw;
+      //font-style: italic;
       text-transform: uppercase;
 
     }
+
+
     hr {
       border-bottom-color: hsla(52, 82%, 74%, 0.4);
       margin: 0; padding:0;
     }
   }
 
-  .nkl-intro__texts {
-
-    display: none !important;
-    // pointer-events: auto;
-    // z-index: 20000;
-    // a {
-    //   color: $nkl-brown--dark;
-    //   text-decoration: none;
-    // }
-    // h2 {
-    //   font-size: 3vw;
-    //   line-height: 0.7;
-    //   border-bottom: 1px dotted $nkl-brown--dark;
-    // }
+  .nkl-intro__sign-info {}
+  .nkl-intro__sign-launcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  .nkl-intro__sign-launcher__button {
+    //font-family: $font-special;
+    padding: $nkl-s $nkl-l;
+    text-transform: uppercase;
+    color: #fff;
+    //font-weight: bold;
+    font-size: $nkl-xl;
+    background: $nkl-blue;
+    border-radius: 30px;
+    text-shadow: 1px 2px 2px hsla(0,0%,0%,0.5);
+    box-shadow: 0 1px 5px 1px hsla(0,0%,0%,0.5);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    white-space: nowrap;
+
+    &:hover {
+      color: $nkl-yellow--pale;
+      box-shadow: 0 1px 5px 3px hsla(0,0%,0%,0.5);
+    }
+  }
+
+  .nkl-intro__texts {
+    display: none !important;
+    // z-index: 20000;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 @include mq-landscape {
 
@@ -285,43 +414,54 @@ STYLE _____________________________________________________________________
   }
 
   .nkl-intro__sign {
+    flex-direction: row;
     position: absolute;
     top: auto;
     bottom: 0;
-    padding: 1vh 0;
+    padding: 2vh 0;
     width: 100%;
-    height: calc(100vh - 100vw*0.5);
-    min-height: 24vh;
+    //height: calc(100vh - 100vw*0.5);
+    height: auto;
+    //min-height: 20vh;
 
-    //background: hsla(0, 0, 0, 0.2);
+    background: hsla(27, 38%, 14%, 0.75);
+    //background: hsla(27, 0%, 0%, 0);
 
     &-heading {
       font-size: 6vw;
-
     }
     &-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100%;
+
+      //height: 100%;
     }
     &-nav {
       display: none;
     }
   }
 
+  .nkl-intro__sign-info {
+    flex: 1 0 60%;
+  }
+  .nkl-intro__sign-launcher {
+    flex: 1 0 40%;
+  }
   .nkl-intro__texts {
 
     display: block !important;
     pointer-events: auto;
     z-index: 20000;
-    a {
-      color: $nkl-brown--dark;
-      text-decoration: none;
-    }
-    h2 {
+    pointer-events: auto;
+
+    .nkl-modal-launcher {
+      padding: $nkl-xs $nkl-xs 0 $nkl-xs; margin: 0;
+      cursor: pointer;
+      font-family: $font-special;
       font-size: 3vw;
-      line-height: 0.7;
+      line-height: 0;
+      color: $nkl-brown--dark;
       border-bottom: 1px dotted $nkl-brown--dark;
     }
   }
@@ -347,6 +487,10 @@ STYLE _____________________________________________________________________
   }
 
 }  // mq-l
+
+
+
+
 
 
 </style>

@@ -31,5 +31,6 @@
 <style scoped>
   a {
     cursor: pointer;
+    text-align: center;
   }
 </style>
