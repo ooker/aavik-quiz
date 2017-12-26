@@ -72,10 +72,13 @@
     font-family: $font-main;
     font-size: 2rem;
     line-height: 1;
-    color: $nkl-white;
+    color: $nkl-brown--dark;
+    border: 5px solid $nkl-brown--dark;
+    font-weight: bold;
 
     //border: 3px $nkl-yellow--pale solid;
-    background: hsla(0, 0%, 0%, 0.8);
+    //background: hsla(0, 0%, 0%, 0.8);
+    //background: $nkl-brown--dark;
     transition: all 1s;
   }
 

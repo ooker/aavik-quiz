@@ -11,61 +11,168 @@ import App from './App.vue'
 
 
 const gameData = [
+  // ekkima
   {
-    "start" : "Aias istus",
-    "aavik" : "jaunis",
-    "end" : "kass",
-    "translation" : "kena",
+    "start" : "Ma ",
+    "aavik" : "ekkisin",
+    "end" : " terve õhtu, enne kui talle sõnumi saatsin.",
+    "translation" : "kõhklesin",
     "options" : [
-      "nuune",
-      "tulnis",
-      "maljas"
+      "päädlesin",
+      "undlesin",
+      "lükkisin"
     ],
     "itemFound" : false
   },
+  // jallis
+  {
+    "start" : "Ta põrnitses ",
+    "aavik" : "jallilt",
+    "end" : " nurgas kui ma teiste poistega tantsisin.",
+    "translation" : "armukadedalt",
+    "options" : [
+      "kübedalt",
+      "niinelt",
+      "vähkralt"
+    ],
+    "itemFound" : false
+  },
+  // kaulis
+  {
+    "start" : "Kõik poisid olid end vaheajal ",
+    "aavik" : "kauliks",
+    "end" : " püganud.",
+    "translation" : "kiilaks",
+    "options" : [
+      "paldriks",
+      "laageks",
+      "nupupeaks"
+    ],
+    "itemFound" : false
+  },
+  // laikima
+  {
+    "start" : "Talle endale ei meeldinud kuidas ta ",
+    "aavik" : "laikis",
+    "end" : ".",
+    "translation" : "välja nägi",
+    "options" : [
+      "luukis",
+      "seeris",
+      "välnis"
+    ],
+    "itemFound" : false
+  },
+  // laupima
+  {
+    "start" : "Poisid vaidlesid esiti vastu, aga lõpuks siiski ",
+    "aavik" : "laupisid",
+    "end" : ".",
+    "translation" : "kuuletusid",
+    "options" : [
+      "mäldisid",
+      "vauglesid",
+      "soodusid"
+    ],
+    "itemFound" : false
+  },
+  // lurjama
+  {
+    "start" : "",
+    "aavik" : "Lurjasime",
+    "end" : " pool päeva mööda ostukeskuseid.",
+    "translation" : "Hulkusime",
+    "options" : [
+      "Võõrlesime",
+      "Hängisime",
+      "Lüürisime"
+    ],
+    "itemFound" : false
+  },
+  // neep
+  {
+    "start" : "Keegi ei mäletanud, mitmendas klassis see ",
+    "aavik" : "neep",
+    "end" : " nüüd käiski.",
+    "translation" : "lapselaps",
+    "options" : [
+      "poiruk",
+      "maamu",
+      "pägalik"
+    ],
+    "itemFound" : false
+  },
+  // nõmik
+  {
+    "start" : "Kes ei õpi, jääb ",
+    "aavik" : "nõmikuks",
+    "end" : ".",
+    "translation" : "harimatuks",
+    "options" : [
+      "nürmikuks",
+      "tümmiks",
+      "pürmiks"
+    ],
+    "itemFound" : false
+  },
+  // polp
+  {
+    "start" : "Liumäest lasti ",
+    "aavik" : "polbi",
+    "end" : " peal alla.",
+    "translation" : "tagumiku",
+    "options" : [
+      "põmari",
+      "reaari",
+      "tümmi"
+    ],
+    "itemFound" : false
+  },
+  // põrpima
+  {
+    "start" : "Ta oli lausa ",
+    "aavik" : "põrpivalt",
+    "end" : " ahvi nägu.",
+    "translation" : "rabavalt",
+    "options" : [
+      "hoopivalt",
+      "äärduvalt",
+      "tohuvalt"
+    ],
+    "itemFound" : false
+  },
+
   // rümu, rümud
   {
-    "start" : "Igasugu",
+    "start" : "Uue õpetaja kohta ringles igasugu ",
     "aavik" : "rümusid",
-    "end" : "ei maksa uskuda.",
+    "end" : ".",
     "translation" : "kuulujutte",
     "options" : [
       "kuulakaid",
-      "sosse",
+      "soslepeid",
       "hõlinaid"
     ],
     "itemFound" : false
   },
+  // sihamsuham
   {
-    "start" : "Volp peaks olema",
-    "aavik" : "polbe",
-    "end" : "",
-    "translation" : "nämmu",
+    "start" : "Laadal oli selline ",
+    "aavik" : "sihamsuham",
+    "end" : " et isa otsustas lahkuda.",
+    "translation" : "möll",
     "options" : [
-      "nüüge",
-      "velbas",
-      "seerduv"
+      "mäserus",
+      "hullar",
+      "mörrand"
     ],
     "itemFound" : false
   },
-  // vüün, vüünu, vüünu
-  {
-    "start" : "Ma ei ole juba kaks",
-    "aavik" : "vüünu",
-    "end" : "maganud",
-    "translation" : "ööpäeva",
-    "options" : [
-      "ööpsi",
-      "päevööd",
-      "pöövi"
-    ],
-    "itemFound" : false
-  },
-  // taav, taavi, taavi
+  // taav, taavu, taavut
   {
     "start" : "",
     "aavik" : "Taav",
-    "end" : "naeris filmi vaadates, nii et pisar silmas.",
+    "end" : " naeris nii, et pisar silmas.",
     "translation" : "Vanaisa",
     "options" : [
       "Kaadu",
@@ -73,7 +180,73 @@ const gameData = [
       "Pööp"
     ],
     "itemFound" : false
+  },
+  // umm
+  {
+    "start" : "Meie ",
+    "aavik" : "umm",
+    "end" : " käib reedeti joogas.",
+    "translation" : "vanaema",
+    "options" : [
+      "mumm",
+      "mammu",
+      "mana"
+    ],
+    "itemFound" : false
+  },
+  // uubuma
+  {
+    "start" : "Olin peale matemaatikat nii ",
+    "aavik" : "uubunud",
+    "end" : ", et ei jõudnudki järgmisesse tundi.",
+    "translation" : "väsinud",
+    "options" : [
+      "tühher",
+      "nõris",
+      "lüüdinud"
+    ],
+    "itemFound" : false
+  },
+  // välmingud
+  {
+    "start" : "Paljud ",
+    "aavik" : "välmingud",
+    "end" : " on meie elu lihtsamaks muutnud.",
+    "translation" : "leiutised",
+    "options" : [
+      "saiendid",
+      "masineriid",
+      "inoovikud"
+    ],
+    "itemFound" : false
+  },
+  // vüün, vüünu, vüünu
+  {
+    "start" : "Ma ei ole juba kaks ",
+    "aavik" : "vüünu",
+    "end" : " maganud.",
+    "translation" : "ööpäeva",
+    "options" : [
+      "ööpsi",
+      "päevakut",
+      "pöövi"
+    ],
+    "itemFound" : false
+  },
+  // öördama
+  {
+    "start" : "Keegi oli jälle ",
+    "aavik" : "öördanud",
+    "end" : " mu peale.",
+    "translation" : "kaevanud",
+    "options" : [
+      "nüttinud",
+      "pääbutanud",
+      "hüllanud"
+    ],
+    "itemFound" : false
   }
+
 ];
 
 export const eventBus = new Vue({

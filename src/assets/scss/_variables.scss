@@ -25,18 +25,15 @@ $nkl-5xs   : $nkl-4xs / $nkl-unit-multiplier;
 
 $nkl-yellow--pale: hsl(52, 82%, 74%);
 $nkl-brown--dark: hsl(27, 38%, 14%);
-$nkl-blue: hsla(180, 61%, 24%, 1);
-$nkl-gray: hsl(223, 13%, 25%);
+$nkl-blue: hsl(180, 61%, 24%);
+$nkl-green: hsl(135, 87%, 30%);
+$nkl-gray: hsl(33, 11%, 48%);
 $nkl-gray--dark: hsl(223, 13%, 20%);
 $nkl-gray--darkest: hsl(220, 13%, 18%);
 $nkl-black: hsl(0, 0%, 5%);
 $nkl-white: hsl(0, 0%, 85%);
 
-@mixin calc($key, $value) {
-  #{$key}: -webkit-calc(#{$value});
-  #{$key}: -moz-calc(#{$value});
-  #{$key}: calc(#{$value});
-}
+
 
 @mixin mq-s {
   @media (min-width: #{$mq-s})  {
