@@ -183,7 +183,7 @@
     padding: $nkl-m $nkl-xxxl;
 
 
-    background: hsla(0, 0%, 100%, 0.15);
+    background: hsla(0, 0%, 100%, 0.3);
     box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.3);
 
     span {
@@ -199,7 +199,7 @@
     margin: 0 0 $nkl-xxl 0;
     padding: $nkl-m $nkl-xxxl;
 
-    background: hsla(0, 0%, 100%, 0.45);
+    background: hsla(0, 0%, 100%, 0.85);
     box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.3);
 
     span {
@@ -218,7 +218,7 @@
     padding: $nkl-xxl;
     font-family: $font-main, cursive;
     font-size: $nkl-xxl;
-    background: hsla(0, 0%, 100%, 0.15);
+    background: hsla(0, 0%, 100%, 0.3);
 
     box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.3);
   }

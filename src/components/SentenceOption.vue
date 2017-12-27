@@ -45,13 +45,13 @@
   a {
     cursor: pointer;
     text-align: center;
-    //display: block;
+    display: inline-block;
     color: $nkl-green;
     transform: scale(1);
 
     &:hover {
       text-decoration: underline;
-      transform: rotate(9);
+
     }
   }
   .nkl-sentence__option--disabled {
@@ -65,20 +65,25 @@
     transition: opacity 1.2s ease-in;
     opacity: 0.2;
     pointer-events:none;*/
+    pointer-events:none;
     transform: scale(1);
 
-    animation: hideOption 0.75s ease-in forwards;
+    animation: hideOption 0.75s ease-out forwards;
   }
   @keyframes hideOption {
     0% {
-      transform: scaleY(1);
+      transform: scale(1);
       opacity: 1;
 
     }
+    15% {
+      transform: scale(1.15);
+    }
     100% {
-      transform: scaleY(0.4);
+      transform: scale(0.6);
       opacity: 0.3;
       text-decoration: line-through;
+      color: $nkl-red;
     }
   }
 </style>

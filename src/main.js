@@ -28,7 +28,7 @@ const gameData = [
   {
     "start" : "Ta põrnitses ",
     "aavik" : "jallilt",
-    "end" : " nurgas kui ma teiste poistega tantsisin.",
+    "end" : " nurgas kui ma teistega tantsisin.",
     "translation" : "armukadedalt",
     "options" : [
       "kübedalt",
@@ -132,7 +132,7 @@ const gameData = [
   {
     "start" : "Ta oli lausa ",
     "aavik" : "põrpivalt",
-    "end" : " ahvi nägu.",
+    "end" : " ahvi sarnane.",
     "translation" : "rabavalt",
     "options" : [
       "hoopivalt",
@@ -144,7 +144,7 @@ const gameData = [
 
   // rümu, rümud
   {
-    "start" : "Uue õpetaja kohta ringles igasugu ",
+    "start" : "Eesti keele õpetaja kohta ringles igasugu ",
     "aavik" : "rümusid",
     "end" : ".",
     "translation" : "kuulujutte",

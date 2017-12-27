@@ -62,6 +62,23 @@
             >
           </div>
         </div>
+
+        <!-- Sõnad -->
+        <div class="nkl-parallax__layer nkl-intro__words" data-depth="0.07" style="perspective:250px; transform-style: preserve-3d; mix-blend-mode: multiply;">
+          <div class="nkl-parallax__item" style="top:26%; right:13vw;">hurmav</div>
+          <div class="nkl-parallax__item" style="bottom:27%; left:33vw;">mõrv</div>
+          <div class="nkl-parallax__item" style="top:8%; left:7vw;">relv</div>
+          <div class="nkl-parallax__item" style="bottom:40%; left:9vw;">kurv</div>
+          <div class="nkl-parallax__item" style="bottom:26%; right:6vw;">pühamu</div>
+          <div class="nkl-parallax__item" style="top:42%; right:4vw;">ahistama</div>
+          <div class="nkl-parallax__item" style="bottom:12%; left:5vw;">kummaline</div>
+          <div class="nkl-parallax__item" style="top:22%; right:42vw;">reetma</div>
+          <div class="nkl-parallax__item" style="top:32%; right:30vw;">jaunis</div>
+          <div class="nkl-parallax__item" style="top:37%; left:3vw;">sulnis</div>
+          <div class="nkl-parallax__item" style="top:13%; right:31vw;">embama</div>
+          <div class="nkl-parallax__item" style="bottom:10%; left:45vw;">morn</div>
+        </div>
+
         <!-- Laud -->
         <div class="nkl-parallax__layer" data-depth="0.17">
           <div class="nkl-parallax__item" style="bottom:-8%; right:10%;">
@@ -75,6 +92,9 @@
             >
           </div>
         </div>
+
+
+
         <!-- Johannes -->
         <div class="nkl-parallax__layer" data-depth="0.33">
           <div class="nkl-parallax__item" style="bottom:-7%; left:12vw;">
@@ -89,7 +109,9 @@
           </div>
         </div>
 
-        <!-- Tekstid -->
+
+
+        <!-- Lingid -->
         <div class="nkl-parallax__layer nkl-intro__texts" data-depth="0.12">
           <div class="nkl-parallax__item" style="top:22%; left:10vw;">
             <nkl-modal-launcher
@@ -122,7 +144,7 @@
         <h1 class="nkl-intro__sign-heading"><span>Johannes</span><span>Aavik</span></h1>
         <hr />
         <p class="nkl-intro__sign-subheading">
-        Sõnade leiutaja
+        Sõnameister
         </p>
       </div>
 
@@ -384,6 +406,14 @@ STYLE _____________________________________________________________________
     // z-index: 20000;
   }
 
+  .nkl-intro__words {
+    display: none !important;
+    font-family: $font-special;
+    font-size: 2.6vw;
+    // color: $nkl-brown--dark;
+    color: hsl(37, 79%, 37%);
+    //text-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
+  }
 
 
 
@@ -453,17 +483,26 @@ STYLE _____________________________________________________________________
     display: block !important;
     pointer-events: auto;
     z-index: 20000;
-    pointer-events: auto;
 
     .nkl-modal-launcher {
-      padding: $nkl-xs $nkl-xs 0 $nkl-xs; margin: 0;
+      padding: 0 $nkl-m 0 $nkl-m; margin: 0;
+      border-radius: 30px;
       cursor: pointer;
       font-family: $font-special;
       font-size: 3vw;
       line-height: 0;
       color: $nkl-brown--dark;
-      border-bottom: 1px dotted $nkl-brown--dark;
+      //border-bottom: 1px dotted $nkl-brown--dark;
+      box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.25);
+      background-color: hsla(0, 20%, 100%, 0.4);
+      transition: background-color 0.3s ease-out;
+      &:hover {
+        background-color: hsla(0, 20%, 100%, 1);
+      }
     }
+  }
+  .nkl-intro__words {
+    display: block !important;
   }
 } // mq-landscape
 

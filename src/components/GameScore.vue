@@ -83,7 +83,7 @@
   }
 
   .alert {
-    background: hsl(16, 83%, 36%);
+    background: $nkl-red;
     width: 5.6rem;
     height: 5.6rem;
     top: 15%;
