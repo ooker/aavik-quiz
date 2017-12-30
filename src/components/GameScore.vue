@@ -77,7 +77,7 @@
     font-weight: bold;
 
     //border: 3px $nkl-yellow--pale solid;
-    //background: hsla(0, 0%, 0%, 0.8);
+    background: hsla(0, 0%, 100%, 0.7);
     //background: $nkl-brown--dark;
     transition: all 1s;
   }
@@ -86,17 +86,18 @@
     background: $nkl-red;
     width: 5.6rem;
     height: 5.6rem;
-    top: 15%;
-    right: 15%;
-    transition: all .75s;
+    top: 10%;
+    right: 10%;
+    transition: all .75s ease-out;
   }
   .success {
     background: hsl(124, 83%, 36%);
     width: 5.6rem;
     height: 5.6rem;
-    top: 15%;
-    right: 15%;
-    transition: all .75s;
+    top: 10%;
+    right: 10%;
+    color: hsl(0, 0%, 100%);
+    transition: all .75s ease-out;
   }
 
 

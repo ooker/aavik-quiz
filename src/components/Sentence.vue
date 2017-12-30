@@ -1,24 +1,32 @@
 <template>
-  <transition name="fade" mode="out-in">
+  <!-- <transition name="fade" mode="out-in"> -->
     <div class="nkl-sentences__container">
 
 
-      <!-- <div class="nkl-sentences"> -->
+      <section class="nkl-sentences__top" style="flex: 1 0 40vh; display:flex; flex-direction: column; justify-content: flex-end;">
 
+        <div class="nkl-sentence__comment">{{gameIndex+1}} / {{gameLength}}</div>
         <div class="nkl-sentence__comment">Tänapäevane variant</div>
         <h2 class="nkl-sentence__translation">
           {{this.currentSentence.start}}<span>{{this.currentSentence.translation}}</span>{{this.currentSentence.end}}
         </h2>
 
-        <div class="nkl-sentence__comment"><span v-if="!itemFound">Leia</span> Aaviku variant</div>
+        <div class="nkl-sentence__comment">
+          <transition name="fade" mode="out-in">
+            <div key="notfound" v-if="!itemFound">Leia Aaviku variant</div>
+            <div key="found" v-else>Tubli, see on õige vastus!</div>
+          </transition>
 
-        <transition name="fade" mode="out-in">
+        </div>
+      </section>
 
-          <div class="nkl-sentence" v-if="!itemFound">
+      <section class="nkl-sentences__bottom" style="flex:0 0 50vh;">
+        <transition name="fade" mode="out-in" :duration="{ enter: 700, leave: 400 }">
+
+          <div v-if="!itemFound" class="nkl-sentence" key="notfound">
 
             <span class="nkl-sentence-start">{{this.currentSentence.start}}</span>
             <span class="nkl-sentence-chooser">
-
               <nkl-sentence-option
                 v-for="choice in choices"
                 v-if="!itemFound"
@@ -26,49 +34,39 @@
                 :word="choice"
                 :right="rightChoice"
                 :current="currentChoice"
-
                 @choiceMade = "checkAnswer"
               ></nkl-sentence-option>
-
-
-                <!--<nkl-sentence-option
-                  v-if="itemFound"
-                  :word="rightChoice"
-                  :right="rightChoice"
-                  :current="currentChoice"
-                    style="text-transform: uppercase; background: hsla(0, 0%, 100%, 0.5); padding: 5px 15px; transform: scale(1.3) rotateZ(-5deg)"
-
-                ></nkl-sentence-option>-->
-
             </span>
             <span class="nkl-sentence-end">{{this.currentSentence.end}}</span>
           </div>
 
-          <h2 v-else-if="itemFound" class="nkl-sentence__aavik">
-            {{this.currentSentence.start}}<span class="nkl-sentence__aavik-word">{{this.currentSentence.aavik}}</span>{{this.currentSentence.end}}
-          </h2>
+          <div v-else key="found" style="display:flex;flex-direction:column;justify-content:flex-start;align-items:center;">
+            <h2  class="nkl-sentence__aavik">
+              {{this.currentSentence.start}}<span class="nkl-sentence__aavik-word">{{this.currentSentence.aavik}}</span>{{this.currentSentence.end}}
+            </h2>
+            <a class="nkl-button" @click="nextRound"><template v-if="this.gameIndex+1 === this.gameLength ">Vaata tulemust</template><template v-else>EDASI</template></a>
+          </div>
 
         </transition>
-        <!-- <hr  /> -->
-
-
-
-
+        <!-- <transition name="fade">
+          <div v-if="currentChoice"  class="">
+            <a class="nkl-button" @click="nextRound">EDASI</a>
+          </div>
+        </transition> -->
+      </section>
 
 
       <a
-        class="nkl-sentence__back-button"
+        class="nkl-back"
         @click="cancelGame"
       >välju mängust</a>
 
 
-      <div v-if="currentChoice"   @click="nextRound" class="">
-        Bing bong good choice!
-      </div>
 
-      <!-- </div> -->
+
+
     </div>
-  </transition>
+  <!-- </transition> -->
 </template>
 
 <script>
@@ -76,7 +74,7 @@
   import SentenceOption from "../components/SentenceOption.vue";
 
   export default {
-    props: ["currentSentence"],
+    props: ["currentSentence", "gameLength", "gameIndex"],
     data(){
       return {
         //image : require("../assets/img/game/" + this.gd[this.gi].item.img) ,
@@ -122,6 +120,7 @@
       },
       cancelGame(){
         eventBus.changeView("nkl-intro");
+        eventBus.restartGame();
       }
     },
     created(){
@@ -150,15 +149,13 @@
 <style scoped lang="scss">
   @import "../assets/scss/_variables.scss";
 
-  hr {
-    width: 78%;
-  }
   .nkl-sentences__container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height:100vh;
+    padding: 4vh 4vw;
 
     background-color: hsl(51, 69%, 85%);
     background-image:
@@ -182,7 +179,7 @@
 
     padding: $nkl-m $nkl-xxxl;
 
-
+    border-radius: $nkl-m;
     background: hsla(0, 0%, 100%, 0.3);
     box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.3);
 
@@ -198,7 +195,7 @@
     text-align: center;
     margin: 0 0 $nkl-xxl 0;
     padding: $nkl-m $nkl-xxxl;
-
+    border-radius: $nkl-m;
     background: hsla(0, 0%, 100%, 0.85);
     box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.3);
 
@@ -213,13 +210,13 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    // height: 50vh;
 
     padding: $nkl-xxl;
+
+    border-radius: $nkl-m;
     font-family: $font-main, cursive;
     font-size: $nkl-xxl;
     background: hsla(0, 0%, 100%, 0.3);
-
     box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.3);
   }
   .nkl-sentence-start, .nkl-sentence-end {
@@ -255,22 +252,6 @@
     padding-bottom: 7px;
   }
 
-  .nkl-sentence__back-button {
-    position: absolute;
-    top: 3vh;
-    left: 4vh;
-    padding: $nkl-xxs $nkl-s;
-    font-family: $font-special;
-    color: $nkl-brown--dark;
-    font-size: $nkl-xxl;
-    //border-bottom: 1px dotted $nkl-brown--dark;
-    &::before {
-      content: "\21a2";
-      display: inline-block;
-      margin-right: 12px;
-
-    }
-  }
 
   @include mq-landscape {
     .nkl-sentence-chooser {

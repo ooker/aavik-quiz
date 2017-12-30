@@ -64,7 +64,7 @@
         </div>
 
         <!-- Sõnad -->
-        <div class="nkl-parallax__layer nkl-intro__words" data-depth="0.07" style="perspective:250px; transform-style: preserve-3d; mix-blend-mode: multiply;">
+        <div class="nkl-parallax__layer nkl-intro__words" data-depth="0.09" style="mix-blend-mode: multiply; opacity:0.7;">
           <div class="nkl-parallax__item" style="top:26%; right:13vw;">hurmav</div>
           <div class="nkl-parallax__item" style="bottom:27%; left:33vw;">mõrv</div>
           <div class="nkl-parallax__item" style="top:8%; left:7vw;">relv</div>
@@ -72,10 +72,10 @@
           <div class="nkl-parallax__item" style="bottom:26%; right:6vw;">pühamu</div>
           <div class="nkl-parallax__item" style="top:42%; right:4vw;">ahistama</div>
           <div class="nkl-parallax__item" style="bottom:12%; left:5vw;">kummaline</div>
-          <div class="nkl-parallax__item" style="top:22%; right:42vw;">reetma</div>
-          <div class="nkl-parallax__item" style="top:32%; right:30vw;">jaunis</div>
+          <div class="nkl-parallax__item" style="top:25%; right:47vw;">reetma</div>
+          <div class="nkl-parallax__item" style="top:44%; right:30vw;">jaunis</div>
           <div class="nkl-parallax__item" style="top:37%; left:3vw;">sulnis</div>
-          <div class="nkl-parallax__item" style="top:13%; right:31vw;">embama</div>
+          <div class="nkl-parallax__item" style="top:8%; right:42vw;">embama</div>
           <div class="nkl-parallax__item" style="bottom:10%; left:45vw;">morn</div>
         </div>
 
@@ -97,7 +97,7 @@
 
         <!-- Johannes -->
         <div class="nkl-parallax__layer" data-depth="0.33">
-          <div class="nkl-parallax__item" style="bottom:-7%; left:12vw;">
+          <div class="nkl-parallax__item" style="bottom:-2%; left:12vw;">
             <!-- <img src="../assets/intro/johannes.png" style="width:40vw; height: auto;" /> -->
             <img
               style="width:40vw; height: auto;"
@@ -131,6 +131,12 @@
               subject="work"
               @modalLauncherClicked="openModal"></nkl-modal-launcher>
           </div>
+          <div class="nkl-parallax__item" style="top:16%; right:1.6vw; transform:scale(0.75)">
+            <nkl-modal-launcher
+              word="projektist"
+              subject="about"
+              @modalLauncherClicked="openModal" ></nkl-modal-launcher>
+          </div>
         </div>
 
       </div>
@@ -144,12 +150,12 @@
         <h1 class="nkl-intro__sign-heading"><span>Johannes</span><span>Aavik</span></h1>
         <hr />
         <p class="nkl-intro__sign-subheading">
-        Sõnameister
+        Saaremaa sõnameister (1880-1973)
         </p>
       </div>
 
       <div class="nkl-intro__sign-launcher">
-          <a class="nkl-intro__sign-launcher__button"
+          <a class="nkl-button"
             @click="openModal('game')"
           >Sõnamäng</a>
       </div>
@@ -229,10 +235,21 @@ Praesent rutrum ante eget urna pretium, nec cursus odio interdum. In fringilla l
               "title" : "Pane end proovile",
               "content" : `
                   <p>
-                    Mõned Aaviku loodud sõnad, mis ei ole laiemalt kasutusse läinud, tunduvad meile tänapäeval üsna naljakad.
+                    Paljud Aaviku leiutatud sõnad tunduvad meile täna väga tuttavad &ndash; me ei tule enamasti selle pealegi, et neid kellegi väljamõeldisteks pidada. Samas on tal suur hulk vähemtuntud sõnu, mis tunduvad tänapäeval kummalised, isegi naljakad.
                   </p>
                   <p>
-                    Näitame sulle ühte tavalist eestikeelset lauset ja koos sellega erinevaid välja mõeldud sõnavariante. Sinu ülesandeks on proovida meie poolt pakutud vaimusünnitiste seast õige Aaviku leiutatud sõna ära tunda.
+                    Näitame sulle ühte &quot;tavalist&quot; lauset ja sama lauset kus üks sõnadest on ära vahetatud väljamõeldud variantidega. Sinu ülesandeks on proovida nende seast just Johannes Aaviku pakutud sõna ära tunda.
+                  </p>
+                  <p>
+                    <i><small>NB! leiuta ka ise täiesti uusi sõnu, mis võiksid sinu meelest sinna lausesse sobida. </small></i>
+                  </p>
+              `
+          },
+          "about" : {
+              "title" : "Dadada",
+              "content" : `
+                  <p>
+                    Hei hei, meie siin!
                   </p>
               `
           },
@@ -379,27 +396,27 @@ STYLE _____________________________________________________________________
     align-items: center;
     justify-content: center;
   }
-  .nkl-intro__sign-launcher__button {
-    //font-family: $font-special;
-    padding: $nkl-s $nkl-l;
-    text-transform: uppercase;
-    color: #fff;
-    //font-weight: bold;
-    font-size: $nkl-xl;
-    background: $nkl-green;
-    border-radius: 30px;
-    text-shadow: 1px 2px 2px hsla(0,0%,0%,0.5);
-    box-shadow: 0 1px 5px 1px hsla(0,0%,0%,0.5);
-    cursor: pointer;
-    transition: all 0.5s ease-out;
-
-    white-space: nowrap;
-
-    &:hover {
-      color: $nkl-yellow--pale;
-      box-shadow: 0 1px 5px 3px hsla(0,0%,0%,0.5);
-    }
-  }
+  // .nkl-intro__sign-launcher__button {
+  //   //font-family: $font-special;
+  //   padding: $nkl-s $nkl-l;
+  //   text-transform: uppercase;
+  //   color: #fff;
+  //   //font-weight: bold;
+  //   font-size: $nkl-xl;
+  //   background: $nkl-green;
+  //   border-radius: 30px;
+  //   text-shadow: 1px 2px 2px hsla(0,0%,0%,0.5);
+  //   box-shadow: 0 1px 5px 1px hsla(0,0%,0%,0.5);
+  //   cursor: pointer;
+  //   transition: all 0.5s ease-out;
+  //
+  //   white-space: nowrap;
+  //
+  //   &:hover {
+  //     color: $nkl-yellow--pale;
+  //     box-shadow: 0 1px 5px 3px hsla(0,0%,0%,0.5);
+  //   }
+  // }
 
   .nkl-intro__texts {
     display: none !important;
@@ -408,10 +425,11 @@ STYLE _____________________________________________________________________
 
   .nkl-intro__words {
     display: none !important;
-    font-family: $font-special;
-    font-size: 2.6vw;
+    font-family: $font-main;
+    font-size: 1.8vw;
     // color: $nkl-brown--dark;
     color: hsl(37, 79%, 37%);
+    font-style: italic;
     //text-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
   }
 
@@ -485,7 +503,7 @@ STYLE _____________________________________________________________________
     z-index: 20000;
 
     .nkl-modal-launcher {
-      padding: 0 $nkl-m 0 $nkl-m; margin: 0;
+      padding: 0 $nkl-l 0 $nkl-m; margin: 0;
       border-radius: 30px;
       cursor: pointer;
       font-family: $font-special;
@@ -523,6 +541,11 @@ STYLE _____________________________________________________________________
     &-heading {
       font-size: 5rem;
     }
+  }
+
+  .nkl-intro__words {
+    font-size: $nkl-l;
+
   }
 
 }  // mq-l

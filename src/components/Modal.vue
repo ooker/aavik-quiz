@@ -9,7 +9,8 @@
 
           <a
             v-if="modalTitle == 'Pane end proovile'"
-            @click="openGame">
+            @click="openGame"
+            class="nkl-button">
               MÄNGIMA
           </a>
         <!-- </div> -->
@@ -58,7 +59,7 @@
 
   a {
     cursor: pointer;
-    color: $nkl-blue;
+    //color: $nkl-blue;
   }
   .nkl-modal {
     position: absolute;
@@ -123,6 +124,13 @@
     font-size: $nkl-xxxl;
   }
 
+  .nkl-img--framed {
+    border: 15px solid transparent;
+    border-image-source: url(../assets/photo-edge.png);
+    border-image-slice: 17;
+    border-image-width: 1;
+    border-image-repeat: round;
+  }
 
 
 

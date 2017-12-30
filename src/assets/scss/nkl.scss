@@ -25,7 +25,7 @@ img {
 
 hr {
   border: none;
-  border-bottom: 1px solid lighten($nkl-gray, 15%);
+  border-bottom: 1px dotted $nkl-yellow--pale;
   margin: 1rem 0;
 }
 
@@ -80,16 +80,42 @@ hr {
   }
 }
 
-.nkl-btn--disabledZZ {
-  //background: #000;
-  //display: none;
-  //height: 0px;
-  //transition: all 0.2s ease-in;
-  /*text-decoration: line-through;
-  transition: opacity 1.2s ease-in;
-  opacity: 0.2;
-  pointer-events:none;*/
+.nkl-button {
+  padding: $nkl-s $nkl-l;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: $nkl-xl;
+  background: $nkl-green;
+  border-radius: 30px;
+  text-shadow: 1px 2px 2px hsla(0,0%,0%,0.5);
+  box-shadow: 0 1px 5px 1px hsla(0,0%,0%,0.5);
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  white-space: nowrap;
+
+  &:hover {
+    color: $nkl-yellow--pale;
+    box-shadow: 0 1px 5px 3px hsla(0,0%,0%,0.5);
+  }
 }
+
+.nkl-back {
+  position: absolute;
+  top: 3vh;
+  left: 3vw;
+  padding: $nkl-xxs $nkl-s;
+  font-family: $font-special;
+  color: $nkl-brown--dark;
+  font-size: $nkl-xxl;
+
+  &::before {
+    content: "\21a2";
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+
 
 .nkl-label {
   background: black;

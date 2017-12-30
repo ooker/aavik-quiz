@@ -76,12 +76,12 @@
       opacity: 1;
 
     }
-    15% {
-      transform: scale(1.15);
+    60% {
+      transform: scale(0.4);
     }
     100% {
       transform: scale(0.6);
-      opacity: 0.3;
+      opacity: 0.5;
       text-decoration: line-through;
       color: $nkl-red;
     }

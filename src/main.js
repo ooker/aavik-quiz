@@ -46,13 +46,13 @@ const gameData = [
     "options" : [
       "paldriks",
       "laageks",
-      "nupupeaks"
+      "lüüneks"
     ],
     "itemFound" : false
   },
   // laikima
   {
-    "start" : "Talle endale ei meeldinud kuidas ta ",
+    "start" : "Talle endale meeldis tohutult, kuidas ta selles videos ",
     "aavik" : "laikis",
     "end" : ".",
     "translation" : "välja nägi",
@@ -84,7 +84,7 @@ const gameData = [
     "translation" : "Hulkusime",
     "options" : [
       "Võõrlesime",
-      "Hängisime",
+      "Jössisime",
       "Lüürisime"
     ],
     "itemFound" : false
@@ -122,7 +122,7 @@ const gameData = [
     "end" : " peal alla.",
     "translation" : "tagumiku",
     "options" : [
-      "põmari",
+      "kannistu",
       "reaari",
       "tümmi"
     ],
@@ -159,7 +159,7 @@ const gameData = [
   {
     "start" : "Laadal oli selline ",
     "aavik" : "sihamsuham",
-    "end" : " et isa otsustas lahkuda.",
+    "end" : ", et isa otsustas lahkuda.",
     "translation" : "möll",
     "options" : [
       "mäserus",
@@ -253,7 +253,7 @@ export const eventBus = new Vue({
   data: {
     gameData : gameData,
     gameIndex : 0,
-    finalScore : 0,
+    //finalScore : 0,
     penalty : -5,
     bonus : 20
   },
@@ -273,6 +273,10 @@ export const eventBus = new Vue({
     foundItem(){
       this.$emit("itemFound");
     },
+
+    restartGame(){
+      this.$emit("gameRestarted");
+    },
     shuffle(sourceArray) {
       for (var i = 0; i < sourceArray.length - 1; i++) {
         var j = i + Math.floor(Math.random() * (sourceArray.length - i));
@@ -282,10 +286,46 @@ export const eventBus = new Vue({
       }
       return sourceArray;
     }
+
   }
 });
 
 new Vue({
   el: '#app',
+  created(){
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '384100842040668',
+      xfbml      : true,
+      version    : 'v2.11'
+    });
+    FB.AppEvents.logPageView();
+
+    FB.shareMyScore = function(data) {
+			FB.ui({
+				method: 'feed',
+				name: 'Mängisin Johannes Aaviku mängu...',
+				link: data.link,
+				picture: data.image,
+				caption: data.caption,
+				description: data.description
+			}, function(response) {
+				if (response && response.post_id) {
+				  //alert('Jagamine õnnestus!');
+				} else {
+					//alert('Kahjuks jagamine ei õnnestunud :)');
+				}
+			});
+		}
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  },
   render: h => h(App)
 })

@@ -6,9 +6,15 @@
     <transition name="fade" mode="out-in">
       <nkl-intro v-if=" currentView === 'nkl-intro' "></nkl-intro>
       <div v-else-if=" currentView === 'nkl-game' " class="nkl-game__container">
-        <nkl-sentence :currentSentence="this.gameData[gameIndex]"></nkl-sentence>
+        <nkl-sentence :currentSentence="this.gameData[gameIndex]" :gameLength="this.gameLength" :gameIndex = "this.gameIndex"></nkl-sentence>
         <nkl-score :score="this.gameScore"></nkl-score>
       </div>
+
+        <nkl-gameover v-else-if=" currentView === 'nkl-gameover' "
+          :gameScore="this.gameScore"
+          :gameLength="this.gameLength"
+          :gameBonus="this.rightBonus"></nkl-gameover>
+      
     </transition>
 
 
@@ -22,22 +28,28 @@
   import Intro from "./components/Intro.vue";
   import GameScore from "./components/GameScore.vue";
   import Sentence from "./components/Sentence.vue";
+  import GameOver from "./components/GameOver.vue";
 
 export default {
     name: 'app',
     data () {
       return {
         currentView: "nkl-intro",
-        gameScore : 50,
-        gameData: eventBus.shuffle(eventBus.gameData),
+        gameScore : 0,
+        //allData: eventBus.shuffle(eventBus.gameData),
+        gameData: eventBus.shuffle(eventBus.gameData).slice(0,this.gameLength) ,
         gameIndex: 0,
-        gameStarted: false
+        gameStarted: false,
+        gameLength: 3,
+        rightBonus: eventBus.bonus,
+        gameOver: false
       }
     },
     components : {
       "nkl-intro": Intro,
       "nkl-score": GameScore,
-      "nkl-sentence" : Sentence
+      "nkl-sentence" : Sentence,
+      "nkl-gameover" : GameOver
     },
     created(){
       eventBus.$on("addedOne", ()=>{
@@ -51,12 +63,29 @@ export default {
         eventBus.finalScore = this.gameScore;
       });
       eventBus.$on("roundChanged", ()=>{
-        this.gameIndex++;
+
+        if(this.gameIndex < this.gameLength-1){
+          this.gameIndex++;
+        } else {
+          this.gameOver = true;
+          this.currentView = "nkl-gameover";
+          console.log("Game over happens here");
+        }
+
         console.log("Game index is " + this.gameIndex) ;
       });
       eventBus.$on("itemFound", ()=>{
           this.gameData[this.gameIndex].itemFound = true;
       });
+
+      eventBus.$on("gameRestarted", ()=>{
+        for (var i=0; i<this.gameData.length; i++) {
+          this.gameData[i].itemFound = false;
+        }
+        this.gameData = eventBus.shuffle(eventBus.gameData).slice(0,this.gameLength);
+        this.gameScore = 0;
+        this.gameIndex = 0;
+      } );
     }
   }
 </script>
