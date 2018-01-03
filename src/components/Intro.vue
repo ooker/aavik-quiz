@@ -66,16 +66,16 @@
         <!-- Sõnad -->
         <div class="nkl-parallax__layer nkl-intro__words" data-depth="0.09" style="mix-blend-mode: multiply; opacity:0.7;">
           <div class="nkl-parallax__item" style="top:26%; right:13vw;">hurmav</div>
-          <div class="nkl-parallax__item" style="bottom:27%; left:33vw;">mõrv</div>
+          <div class="nkl-parallax__item" style="bottom:26%; left:48vw;">mõrv</div>
           <div class="nkl-parallax__item" style="top:8%; left:7vw;">relv</div>
-          <div class="nkl-parallax__item" style="bottom:40%; left:9vw;">kurv</div>
+          <div class="nkl-parallax__item" style="bottom:43%; left:7vw;">kurv</div>
           <div class="nkl-parallax__item" style="bottom:26%; right:6vw;">pühamu</div>
           <div class="nkl-parallax__item" style="top:42%; right:4vw;">ahistama</div>
-          <div class="nkl-parallax__item" style="bottom:12%; left:5vw;">kummaline</div>
+          <div class="nkl-parallax__item" style="bottom:16%; left:5vw;">kummaline</div>
           <div class="nkl-parallax__item" style="top:25%; right:47vw;">reetma</div>
           <div class="nkl-parallax__item" style="top:44%; right:30vw;">jaunis</div>
           <div class="nkl-parallax__item" style="top:37%; left:3vw;">sulnis</div>
-          <div class="nkl-parallax__item" style="top:8%; right:42vw;">embama</div>
+          <div class="nkl-parallax__item" style="top:8%; left:45vw;">embama</div>
           <div class="nkl-parallax__item" style="bottom:10%; left:45vw;">morn</div>
         </div>
 
@@ -113,19 +113,19 @@
 
         <!-- Lingid -->
         <div class="nkl-parallax__layer nkl-intro__texts" data-depth="0.12">
-          <div class="nkl-parallax__item" style="top:22%; left:10vw;">
+          <div class="nkl-parallax__item" style="top:26%; left:5vw;">
             <nkl-modal-launcher
-              word="elu"
+              word="elu ja töö"
               subject="life"
               @modalLauncherClicked="openModal"></nkl-modal-launcher>
           </div>
-          <div class="nkl-parallax__item" style="top:17%; left:40vw;">
+          <div class="nkl-parallax__item" style="top:66%; left:34vw;">
             <nkl-modal-launcher
-              word="töö"
+              word="Aavik isiksusena"
               subject="work"
               @modalLauncherClicked="openModal"></nkl-modal-launcher>
           </div>
-          <div class="nkl-parallax__item" style="top:59%; left:43vw;">
+          <div class="nkl-parallax__item" style="top:18%; left:38vw;">
             <nkl-modal-launcher
               word="sõnad"
               subject="work"
@@ -135,6 +135,12 @@
             <nkl-modal-launcher
               word="projektist"
               subject="about"
+              @modalLauncherClicked="openModal" ></nkl-modal-launcher>
+          </div>
+          <div class="nkl-parallax__item" style="top:68%; left:5vw;">
+            <nkl-modal-launcher
+              word="lisalugemist"
+              subject="links"
               @modalLauncherClicked="openModal" ></nkl-modal-launcher>
           </div>
         </div>
@@ -272,6 +278,7 @@ Praesent rutrum ante eget urna pretium, nec cursus odio interdum. In fringilla l
     methods : {
       openModal(subject) {
         this.activeSubject = subject;
+
       },
       closeModal() {
         this.activeSubject = false;
@@ -377,10 +384,9 @@ STYLE _____________________________________________________________________
       font-weight: 400;
       text-align: center;
       color: $nkl-yellow--pale;
-      letter-spacing: 0.5vw;
+      letter-spacing: 0.3vw;
       //font-style: italic;
       text-transform: uppercase;
-
     }
 
 
@@ -396,31 +402,9 @@ STYLE _____________________________________________________________________
     align-items: center;
     justify-content: center;
   }
-  // .nkl-intro__sign-launcher__button {
-  //   //font-family: $font-special;
-  //   padding: $nkl-s $nkl-l;
-  //   text-transform: uppercase;
-  //   color: #fff;
-  //   //font-weight: bold;
-  //   font-size: $nkl-xl;
-  //   background: $nkl-green;
-  //   border-radius: 30px;
-  //   text-shadow: 1px 2px 2px hsla(0,0%,0%,0.5);
-  //   box-shadow: 0 1px 5px 1px hsla(0,0%,0%,0.5);
-  //   cursor: pointer;
-  //   transition: all 0.5s ease-out;
-  //
-  //   white-space: nowrap;
-  //
-  //   &:hover {
-  //     color: $nkl-yellow--pale;
-  //     box-shadow: 0 1px 5px 3px hsla(0,0%,0%,0.5);
-  //   }
-  // }
 
   .nkl-intro__texts {
     display: none !important;
-    // z-index: 20000;
   }
 
   .nkl-intro__words {
@@ -430,7 +414,6 @@ STYLE _____________________________________________________________________
     // color: $nkl-brown--dark;
     color: hsl(37, 79%, 37%);
     font-style: italic;
-    //text-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
   }
 
 
@@ -468,7 +451,6 @@ STYLE _____________________________________________________________________
     bottom: 0;
     padding: 2vh 0;
     width: 100%;
-    //height: calc(100vh - 100vw*0.5);
     height: auto;
     //min-height: 20vh;
 
@@ -507,7 +489,7 @@ STYLE _____________________________________________________________________
       border-radius: 30px;
       cursor: pointer;
       font-family: $font-special;
-      font-size: 3vw;
+      font-size: 2.7vw;
       line-height: 0;
       color: $nkl-brown--dark;
       //border-bottom: 1px dotted $nkl-brown--dark;
@@ -537,15 +519,24 @@ STYLE _____________________________________________________________________
 
 @include mq-l {
   .nkl-intro__sign {
-
+    padding: 2vh 0 1vh 0;
     &-heading {
-      font-size: 5rem;
+      font-size: 4.7rem;
+    }
+    &-subheading {
+      margin: $nkl-xxs 0 0 0; padding: 0 $nkl-s;
     }
   }
 
   .nkl-intro__words {
     font-size: $nkl-l;
+  }
 
+  .nkl-intro__texts {
+
+    .nkl-modal-launcher {
+      font-size: 2.4vw;
+    }
   }
 
 }  // mq-l

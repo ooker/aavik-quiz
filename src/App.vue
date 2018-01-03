@@ -10,11 +10,11 @@
         <nkl-score :score="this.gameScore"></nkl-score>
       </div>
 
-        <nkl-gameover v-else-if=" currentView === 'nkl-gameover' "
-          :gameScore="this.gameScore"
-          :gameLength="this.gameLength"
-          :gameBonus="this.rightBonus"></nkl-gameover>
-      
+      <nkl-gameover v-else-if=" currentView === 'nkl-gameover' "
+        :gameScore="this.gameScore"
+        :gameLength="this.gameLength"
+        :gameBonus="this.rightBonus"></nkl-gameover>
+
     </transition>
 
 

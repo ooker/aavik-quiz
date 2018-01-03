@@ -179,7 +179,7 @@
 
     padding: $nkl-m $nkl-xxxl;
 
-    border-radius: $nkl-m;
+    border-radius: $nkl-s;
     background: hsla(0, 0%, 100%, 0.3);
     box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.3);
 
@@ -195,7 +195,7 @@
     text-align: center;
     margin: 0 0 $nkl-xxl 0;
     padding: $nkl-m $nkl-xxxl;
-    border-radius: $nkl-m;
+    border-radius: $nkl-s;
     background: hsla(0, 0%, 100%, 0.85);
     box-shadow: 0 0 4px 1px hsla(0, 0%, 0%, 0.3);
 
@@ -213,7 +213,7 @@
 
     padding: $nkl-xxl;
 
-    border-radius: $nkl-m;
+    border-radius: $nkl-s;
     font-family: $font-main, cursive;
     font-size: $nkl-xxl;
     background: hsla(0, 0%, 100%, 0.3);

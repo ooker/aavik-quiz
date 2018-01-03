@@ -215,7 +215,7 @@ const gameData = [
     "translation" : "leiutised",
     "options" : [
       "saiendid",
-      "masineriid",
+      "massiinid",
       "inoovikud"
     ],
     "itemFound" : false

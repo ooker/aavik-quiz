@@ -1,11 +1,12 @@
 <template>
-  <div class="nkl-modal" >
+  <div class="nkl-modal">
 
       <div class="nkl-modal__content">
         <!-- <div style="margin:auto; min-height: 100vh;"> -->
 
           <h1 class="nkl-modal__title">{{ modalTitle }}</h1>
-          <div v-html="modalContent" ></div>
+          <div v-html="modalContent"></div>
+          <!-- <component :is="modalTitle"></component> -->
 
           <a
             v-if="modalTitle == 'Pane end proovile'"
@@ -16,11 +17,7 @@
         <!-- </div> -->
       </div>
 
-      <a
-
-        class="nkl-modal__close"
-        @click = "closeModal"
-      >
+      <a class="nkl-modal__close" @click = "closeModal">
         <span>&times;</span>
       </a>
 
@@ -32,9 +29,14 @@
 
 <script>
   import {eventBus} from "../main";
+  import ModalGame from "../components/modals/ModalGame.vue";
+
 
   export default {
     props: ["modalTitle","modalContent"],
+    components : {
+      "nkl-modal-game": ModalGame
+    },
     data(){
       return {
         message : "Intro modal here"
@@ -143,73 +145,4 @@
       line-height: 1;
     }
   }
-
-  /*
-  @include mq-xl {
-    .nkl-modal__close {
-      top: 25px;
-      right: 40px;
-      width: 56px;
-      height: 56px;
-      max-width: 56px;
-      max-height: 56px;
-
-
-      font-size: 4vw;
-      font-weight: bold;
-      line-height: 1;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  }
-  */
-
-
-
-
-  /*.vb > .vb-dragger {
-    z-index: 5;
-    width: 12px;
-    right: 0;
-}
-
-.vb > .vb-dragger > .vb-dragger-styler {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: rotate3d(0,0,0,0);
-    transform: rotate3d(0,0,0,0);
-    -webkit-transition:
-        background-color 100ms ease-out,
-        margin 100ms ease-out,
-        height 100ms ease-out;
-    transition:
-        background-color 100ms ease-out,
-        margin 100ms ease-out,
-        height 100ms ease-out;
-    background-color: rgba(48, 121, 244,.1);
-    margin: 5px 5px 5px 0;
-    border-radius: 20px;
-    height: calc(100% - 10px);
-    display: block;
-}
-
-.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(48, 121, 244,.3);
-}
-
-.vb > .vb-dragger:hover > .vb-dragger-styler {
-    background-color: rgba(48, 121, 244,.5);
-    margin: 0px;
-    height: 100%;
-}
-
-.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(48, 121, 244,.5);
-    margin: 0px;
-    height: 100%;
-}
-
-.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(48, 121, 244,.5);
-}*/
 </style>
