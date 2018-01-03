@@ -64,9 +64,9 @@
         </div>
 
         <!-- Sõnad -->
-        <div class="nkl-parallax__layer nkl-intro__words" data-depth="0.09" style="mix-blend-mode: multiply; opacity:0.7;">
+        <div class="nkl-parallax__layer nkl-intro__words" data-depth="0.09">
           <div class="nkl-parallax__item" style="top:26%; right:13vw;">hurmav</div>
-          <div class="nkl-parallax__item" style="bottom:26%; left:48vw;">mõrv</div>
+          <div class="nkl-parallax__item" style="bottom:24%; left:48vw;">mõrv</div>
           <div class="nkl-parallax__item" style="top:8%; left:7vw;">relv</div>
           <div class="nkl-parallax__item" style="bottom:43%; left:7vw;">kurv</div>
           <div class="nkl-parallax__item" style="bottom:26%; right:6vw;">pühamu</div>
@@ -100,10 +100,10 @@
           <div class="nkl-parallax__item" style="bottom:-2%; left:12vw;">
             <!-- <img src="../assets/intro/johannes.png" style="width:40vw; height: auto;" /> -->
             <img
-              style="width:40vw; height: auto;"
+              style="width:38vw; height: auto;"
               src="../assets/intro/johannes.png"
               srcset="../assets/intro/johannes.png 500w, ../assets/intro/johannes_lg.png 900w, ../assets/intro/johannes_sm.png 250w"
-              sizes="40vw"
+              sizes="38vw"
               alt="Johannes Aavik mängib toas viiulit"
             >
           </div>
@@ -114,34 +114,39 @@
         <!-- Lingid -->
         <div class="nkl-parallax__layer nkl-intro__texts" data-depth="0.12">
           <div class="nkl-parallax__item" style="top:26%; left:5vw;">
-            <nkl-modal-launcher
+            <!-- <nkl-modal-launcher
               word="elu ja töö"
               subject="life"
-              @modalLauncherClicked="openModal"></nkl-modal-launcher>
+              @modalLauncherClicked="openModal"></nkl-modal-launcher> -->
+              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-life')">elu ja töö</a>
           </div>
           <div class="nkl-parallax__item" style="top:66%; left:34vw;">
-            <nkl-modal-launcher
+            <!-- <nkl-modal-launcher
               word="Aavik isiksusena"
-              subject="work"
-              @modalLauncherClicked="openModal"></nkl-modal-launcher>
+              subject="person"
+              @modalLauncherClicked="openModal"></nkl-modal-launcher> -->
+              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-life')">Aavik isiksusena</a>
           </div>
           <div class="nkl-parallax__item" style="top:18%; left:38vw;">
-            <nkl-modal-launcher
+            <!-- <nkl-modal-launcher
               word="sõnad"
               subject="work"
-              @modalLauncherClicked="openModal"></nkl-modal-launcher>
+              @modalLauncherClicked="openModal"></nkl-modal-launcher> -->
+              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-words')">sõnad</a>
           </div>
           <div class="nkl-parallax__item" style="top:16%; right:1.6vw; transform:scale(0.75)">
-            <nkl-modal-launcher
+            <!-- <nkl-modal-launcher
               word="projektist"
               subject="about"
-              @modalLauncherClicked="openModal" ></nkl-modal-launcher>
+              @modalLauncherClicked="openModal" ></nkl-modal-launcher> -->
+              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-about')">projektist</a>
           </div>
           <div class="nkl-parallax__item" style="top:68%; left:5vw;">
-            <nkl-modal-launcher
+            <!-- <nkl-modal-launcher
               word="lisalugemist"
               subject="links"
-              @modalLauncherClicked="openModal" ></nkl-modal-launcher>
+              @modalLauncherClicked="openModal" ></nkl-modal-launcher> -->
+              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-links')">lisamaterjale</a>
           </div>
         </div>
 
@@ -162,7 +167,7 @@
 
       <div class="nkl-intro__sign-launcher">
           <a class="nkl-button"
-            @click="openModal('game')"
+            @click="openModal('nkl-modal-game')"
           >Sõnamäng</a>
       </div>
 
@@ -181,8 +186,7 @@
     <transition name="fade">
       <nkl-modal
         v-if="activeSubject"
-        :modalTitle="getSubject.title"
-        :modalContent="getSubject.content"
+        :modalSubject="this.activeSubject"
         @modalCloserClicked="closeModal"
       ></nkl-modal>
     </transition>
@@ -206,79 +210,23 @@ SCRIPT _____________________________________________________________________
   const Parallax = require('parallax-js');
 
   import Modal from "../components/Modal.vue";
-  import ModalLauncher from "../components/ModalLauncher.vue";
 
   export default {
-    //props: ["gameData", "gameIndex"],
     data(){
       return {
-        activeSubject : false,
-        modals: {
-          "life" : {
-            "title" : "About life",
-            "content" : "About life text here"
-          },
-          "work" : {
-            "title" : "About work",
-            "content" : `
-                About work text here
-                <br />
-                <b>Maybe some HTML</b> too
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ex sapien. Sed suscipit molestie iaculis. Pellentesque pellentesque pellentesque metus sit amet sodales. Pellentesque non nibh non ante posuere accumsan ac id ante. Donec luctus neque in mauris ornare, ac dignissim leo aliquam. Fusce consequat consectetur sapien et tempor. Aenean sed molestie leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin commodo neque eu nunc malesuada bibendum. Ut iaculis libero non nunc tempor aliquam. Nunc ut tincidunt massa. Cras sagittis semper massa, vel venenatis purus pretium ac. Sed auctor feugiat augue, et sodales nibh bibendum et. Cras imperdiet quam dui, eu faucibus lacus vestibulum ac.</p>
-                <p>
-Praesent rutrum ante eget urna pretium, nec cursus odio interdum. In fringilla luctus leo, eu iaculis lacus posuere vel. Donec eu molestie nisi. Nunc dapibus quam non mauris posuere sodales. Fusce id metus luctus magna dapibus blandit. Suspendisse tempor ac dolor in varius. Aliquam sagittis consectetur urna, euismod facilisis nisi vulputate eget. Etiam vehicula eros nec scelerisque porttitor. Cras gravida congue leo, ac porttitor augue dictum eget. Praesent porta, mauris vitae blandit venenatis, sapien lectus malesuada lacus, id dictum nulla dolor nec elit.
-                </p>
-                <p>
-Praesent rutrum ante eget urna pretium, nec cursus odio interdum. In fringilla luctus leo, eu iaculis lacus posuere vel. Donec eu molestie nisi. Nunc dapibus quam non mauris posuere sodales. Fusce id metus luctus magna dapibus blandit. Suspendisse tempor ac dolor in varius. Aliquam sagittis consectetur urna, euismod facilisis nisi vulputate eget. Etiam vehicula eros nec scelerisque porttitor. Cras gravida congue leo, ac porttitor augue dictum eget. Praesent porta, mauris vitae blandit venenatis, sapien lectus malesuada lacus, id dictum nulla dolor nec elit.
-                </p>
-                <p>
-Praesent rutrum ante eget urna pretium, nec cursus odio interdum. In fringilla luctus leo, eu iaculis lacus posuere vel. Donec eu molestie nisi. Nunc dapibus quam non mauris posuere sodales. Fusce id metus luctus magna dapibus blandit. Suspendisse tempor ac dolor in varius. Aliquam sagittis consectetur urna, euismod facilisis nisi vulputate eget. Etiam vehicula eros nec scelerisque porttitor. Cras gravida congue leo, ac porttitor augue dictum eget. Praesent porta, mauris vitae blandit venenatis, sapien lectus malesuada lacus, id dictum nulla dolor nec elit.
-                </p>
-              `
-          },
-          "game" : {
-              "title" : "Pane end proovile",
-              "content" : `
-                  <p>
-                    Paljud Aaviku leiutatud sõnad tunduvad meile täna väga tuttavad &ndash; me ei tule enamasti selle pealegi, et neid kellegi väljamõeldisteks pidada. Samas on tal suur hulk vähemtuntud sõnu, mis tunduvad tänapäeval kummalised, isegi naljakad.
-                  </p>
-                  <p>
-                    Näitame sulle ühte &quot;tavalist&quot; lauset ja sama lauset kus üks sõnadest on ära vahetatud väljamõeldud variantidega. Sinu ülesandeks on proovida nende seast just Johannes Aaviku pakutud sõna ära tunda.
-                  </p>
-                  <p>
-                    <i><small>NB! leiuta ka ise täiesti uusi sõnu, mis võiksid sinu meelest sinna lausesse sobida. </small></i>
-                  </p>
-              `
-          },
-          "about" : {
-              "title" : "Dadada",
-              "content" : `
-                  <p>
-                    Hei hei, meie siin!
-                  </p>
-              `
-          },
-        }
+        activeSubject : false
       }
     },
     components : {
-      "nkl-modal": Modal,
-      "nkl-modal-launcher": ModalLauncher
+      "nkl-modal": Modal
     },
     mounted(){
       const scene = document.getElementById('nkl-parallax__scene');
       const parallaxInstance = new Parallax(scene);
     },
-    computed : {
-      getSubject: function() {
-        return this.modals[this.activeSubject];
-      },
-    },
     methods : {
       openModal(subject) {
         this.activeSubject = subject;
-
       },
       closeModal() {
         this.activeSubject = false;
@@ -391,7 +339,8 @@ STYLE _____________________________________________________________________
 
 
     hr {
-      border-bottom-color: hsla(52, 82%, 74%, 0.4);
+      border: none;
+      border-bottom:1px dotted hsla(52, 82%, 74%, 0.4);
       margin: 0; padding:0;
     }
   }
@@ -409,11 +358,7 @@ STYLE _____________________________________________________________________
 
   .nkl-intro__words {
     display: none !important;
-    font-family: $font-main;
-    font-size: 1.8vw;
-    // color: $nkl-brown--dark;
-    color: hsl(37, 79%, 37%);
-    font-style: italic;
+
   }
 
 
@@ -454,7 +399,7 @@ STYLE _____________________________________________________________________
     height: auto;
     //min-height: 20vh;
 
-    background: hsla(27, 38%, 14%, 0.75);
+    background: hsla(27, 38%, 14%, 0.85);
     //background: hsla(27, 0%, 0%, 0);
 
     &-heading {
@@ -485,8 +430,8 @@ STYLE _____________________________________________________________________
     z-index: 20000;
 
     .nkl-modal-launcher {
-      padding: 0 $nkl-l 0 $nkl-m; margin: 0;
-      border-radius: 30px;
+      padding: 0 1vw 0 1vw; margin: 0;
+      border-radius: 60px;
       cursor: pointer;
       font-family: $font-special;
       font-size: 2.7vw;
@@ -494,7 +439,7 @@ STYLE _____________________________________________________________________
       color: $nkl-brown--dark;
       //border-bottom: 1px dotted $nkl-brown--dark;
       box-shadow: 0 1px 2px 1px hsla(0, 0%, 0%, 0.25);
-      background-color: hsla(0, 20%, 100%, 0.4);
+      background-color: hsla(0, 20%, 100%, 0.6);
       transition: background-color 0.3s ease-out;
       &:hover {
         background-color: hsla(0, 20%, 100%, 1);
@@ -502,7 +447,14 @@ STYLE _____________________________________________________________________
     }
   }
   .nkl-intro__words {
-    display: block !important;
+    display: none !important;
+    font-family: $font-main;
+    font-size: 1.8vw;
+    // color: hsl(37, 79%, 37%);
+    color: hsl(50, 100%, 75%);
+    font-style: italic;
+    mix-blend-mode: overlay;
+    // opacity:1;
   }
 } // mq-landscape
 

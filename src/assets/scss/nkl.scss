@@ -25,7 +25,7 @@ img {
 
 hr {
   border: none;
-  border-bottom: 1px dotted $nkl-yellow--pale;
+  border-bottom: 1px solid $nkl-brown--dark;
   margin: 1rem 0;
 }
 
@@ -117,14 +117,30 @@ hr {
 }
 
 
-.nkl-label {
-  background: black;
-  border-radius: 6px;
-  color: white;
-  padding: 5px 8px;
-  //transform: translate(-100px, 34px) rotateZ(-7deg);
+.nkl-img--framed {
+  border: 15px solid transparent;
+  border-image-source: url(../photo-edge.png);
+  border-image-slice: 17;
+  border-image-width: 1;
+  border-image-repeat: round;
 }
 
 .nkl-important {
   color: $nkl-yellow--pale;
+}
+
+.nkl-modal__content {
+  h1 {
+    font-size:$nkl-xxxl;
+  }
+  h2, h3, h4, h5 {
+    font-family: $font-main;
+    font-weight: bold;
+  }
+
+  @include mq-l {
+    h1 {
+      font-size:$nkl-4xl;
+    }
+  }
 }
