@@ -144,3 +144,53 @@ hr {
     }
   }
 }
+
+
+.nkl-modal__img {
+  width: 90%;
+
+  @include mq-s {
+    width: 60%;
+  }
+  @include mq-m {
+    width: 45%;
+  }
+}
+
+.nkl-modal__img--bigger {
+  width: 100%;
+  
+  @include mq-s {
+    width: 60%;
+  }
+  @include mq-m {
+    width: 60%;
+  }
+}
+
+.nkl-modal__img--right {
+  @include mq-s {
+    float: right;
+    margin-left: 1rem;
+  }
+  @include mq-m {
+    transform: translateX(7%);
+  }
+}
+
+.nkl-modal__img--left {
+  @include mq-s {
+    float: left;
+    margin-right: 1rem;
+  }
+  @include mq-m {
+    transform: translateX(-7%);
+  }
+}
+
+.nkl-modal__img--rotateR {
+  transform: rotate(1.5deg);
+}
+.nkl-modal__img--rotateL {
+  transform: rotate(-1.5deg);
+}

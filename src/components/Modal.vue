@@ -32,14 +32,15 @@
   import ModalGame from "../components/modals/ModalGame.vue";
   import ModalLife from "../components/modals/ModalLife.vue";
   import ModalWords from "../components/modals/ModalWords.vue";
-
+  import ModalAbout from "../components/modals/ModalAbout.vue";
 
   export default {
     props: ["modalSubject"],
     components : {
       "nkl-modal-game": ModalGame,
       "nkl-modal-life": ModalLife,
-      "nkl-modal-words": ModalWords
+      "nkl-modal-words": ModalWords,
+      "nkl-modal-about": ModalAbout
     },
     data(){
       return {
@@ -137,10 +138,7 @@
   h1 {
     font-size: $nkl-xxxl;
   }
-
-
-
-
+  
 
   @include mq-l-landscape {
     .nkl-modal__content > div {
@@ -151,6 +149,6 @@
         line-height: 1;
       }
     }
-
+    
   }
 </style>

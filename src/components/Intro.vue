@@ -43,7 +43,7 @@
               <g fill="url(#tapeet)" fill-rule="evenodd">
                   <path d="
                       M 0,0 h 1920 v 1080 h -1920 z
-                      M 1140,140 h 480 v 470 h -480 z" />
+                      M 1140,135 h 440 v 466 h -440 z" />
               </g>
             </svg>
           </div>
