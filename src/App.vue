@@ -40,7 +40,7 @@ export default {
         gameData: eventBus.shuffle(eventBus.gameData).slice(0,this.gameLength) ,
         gameIndex: 0,
         gameStarted: false,
-        gameLength: 3,
+        gameLength: 7,
         rightBonus: eventBus.bonus,
         gameOver: false
       }

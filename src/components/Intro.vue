@@ -125,7 +125,7 @@
               word="Aavik isiksusena"
               subject="person"
               @modalLauncherClicked="openModal"></nkl-modal-launcher> -->
-              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-life')">Aavik isiksusena</a>
+              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-about')">projektist</a>
           </div>
           <div class="nkl-parallax__item" style="top:18%; left:38vw;">
             <!-- <nkl-modal-launcher
@@ -133,13 +133,6 @@
               subject="work"
               @modalLauncherClicked="openModal"></nkl-modal-launcher> -->
               <a class="nkl-modal-launcher" @click="openModal('nkl-modal-words')">sõnad</a>
-          </div>
-          <div class="nkl-parallax__item" style="top:16%; right:1.6vw; transform:scale(0.75)">
-            <!-- <nkl-modal-launcher
-              word="projektist"
-              subject="about"
-              @modalLauncherClicked="openModal" ></nkl-modal-launcher> -->
-              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-about')">projektist</a>
           </div>
           <div class="nkl-parallax__item" style="top:68%; left:5vw;">
             <!-- <nkl-modal-launcher
@@ -345,7 +338,7 @@ STYLE _____________________________________________________________________
     }
   }
 
-  .nkl-intro__sign-info {}
+  
   .nkl-intro__sign-launcher {
     display: flex;
     align-items: center;

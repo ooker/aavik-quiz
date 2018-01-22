@@ -33,6 +33,7 @@
   import ModalLife from "../components/modals/ModalLife.vue";
   import ModalWords from "../components/modals/ModalWords.vue";
   import ModalAbout from "../components/modals/ModalAbout.vue";
+  import ModalLinks from "../components/modals/ModalLinks.vue";
 
   export default {
     props: ["modalSubject"],
@@ -40,7 +41,8 @@
       "nkl-modal-game": ModalGame,
       "nkl-modal-life": ModalLife,
       "nkl-modal-words": ModalWords,
-      "nkl-modal-about": ModalAbout
+      "nkl-modal-about": ModalAbout,
+      "nkl-modal-links": ModalLinks
     },
     data(){
       return {

@@ -98,6 +98,18 @@ hr {
     color: $nkl-yellow--pale;
     box-shadow: 0 1px 5px 3px hsla(0,0%,0%,0.5);
   }
+
+  &--small {
+    padding: $nkl-5xs $nkl-xxs;
+    border-radius: 15px;
+    font-size: $nkl-m;
+    text-decoration: none;
+    text-shadow: 0 1px 1px hsla(0,0%,0%,0.5);
+    box-shadow: 0 1px 2px 1px hsla(0,0%,0%,0.5);
+    &:hover {
+      box-shadow: 0 1px 3px 1px hsla(0,0%,0%,0.5);
+    }
+  }
 }
 
 .nkl-back {
@@ -132,12 +144,16 @@ hr {
 .nkl-modal__content {
   h1 {
     font-size:$nkl-xxxl;
+    line-height: 1.1;
+    margin-left: -4%;
   }
   h2, h3, h4, h5 {
     font-family: $font-main;
     font-weight: bold;
   }
-
+  hr {
+    border-bottom:1px dotted black;
+  }
   @include mq-l {
     h1 {
       font-size:$nkl-4xl;
@@ -172,9 +188,11 @@ hr {
   @include mq-s {
     float: right;
     margin-left: 1rem;
+    transform: rotate(1.5deg);
   }
   @include mq-m {
-    transform: translateX(7%);
+    margin-left: 0.2rem;
+    transform: rotate(1.5deg) translateX(9%);
   }
 }
 
@@ -182,15 +200,10 @@ hr {
   @include mq-s {
     float: left;
     margin-right: 1rem;
+    transform: rotate(-1.5deg);
   }
   @include mq-m {
-    transform: translateX(-7%);
+    margin-right: 0.2rem;
+    transform: rotate(-1.5deg) translateX(-9%);
   }
-}
-
-.nkl-modal__img--rotateR {
-  transform: rotate(1.5deg);
-}
-.nkl-modal__img--rotateL {
-  transform: rotate(-1.5deg);
 }

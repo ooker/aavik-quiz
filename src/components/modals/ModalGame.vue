@@ -32,6 +32,7 @@
     },
     methods: {
       openGame() {
+        eventBus.restartGame();
         eventBus.changeView("nkl-game");
       }
     }

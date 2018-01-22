@@ -11,6 +11,19 @@ import App from './App.vue'
 
 
 const gameData = [
+  // braveerima
+  {
+    "start" : "Seetõttu ",
+    "aavik" : "braveerisin",
+    "end" : " ma meelega kooli kodukorda.",
+    "translation" : "trotsisin",
+    "options" : [
+      "vänglesin",
+      "rõkkisin",
+      "türeerisin"
+    ],
+    "itemFound" : false
+  },
   // ekkima
   {
     "start" : "Ma ",
@@ -24,6 +37,19 @@ const gameData = [
     ],
     "itemFound" : false
   },
+  // faksid
+  {
+    "start" : "Vanaonu Elmari ",
+    "aavik" : "faksid",
+    "end" : " hakkasid mind tasapisi juba ära tüütama.",
+    "translation" : "tembud",
+    "options" : [
+      "näkad",
+      "vämbud",
+      "nõlmikud"
+    ],
+    "itemFound" : false
+  },
   // jallis
   {
     "start" : "Ta põrnitses ",
@@ -34,6 +60,45 @@ const gameData = [
       "kübedalt",
       "niinelt",
       "vähkralt"
+    ],
+    "itemFound" : false
+  },
+  // juuvima
+  {
+    "start" : "Direktor ",
+    "aavik" : "juuvis",
+    "end" : " kõik laste ettepanekud.",
+    "translation" : "kiitis heaks",
+    "options" : [
+      "hüüvis",
+      "kiindis",
+      "leebis"
+    ],
+    "itemFound" : false
+  },
+  // jõre
+  {
+    "start" : "Täna oli ta eriti ",
+    "aavik" : "jõre",
+    "end" : ".",
+    "translation" : "tusane",
+    "options" : [
+      "möre",
+      "kärv",
+      "kõõrel"
+    ],
+    "itemFound" : false
+  },
+  // kaavitama
+  {
+    "start" : "Publiku ",
+    "aavik" : "kaavitamisest",
+    "end" : " oli kõvasti kasu.",
+    "translation" : "kaasa aitamisest",
+    "options" : [
+      "hälpimisest",
+      "rüldamisest",
+      "kaaramisest"
     ],
     "itemFound" : false
   },
@@ -76,6 +141,19 @@ const gameData = [
     ],
     "itemFound" : false
   },
+  // loir
+  {
+    "start" : "Kuldselt särav ",
+    "aavik" : "loir",
+    "end" : " lehvis meie kangelase ümber.",
+    "translation" : "aupaiste",
+    "options" : [
+      "vüül",
+      "vaalar",
+      "vaale"
+    ],
+    "itemFound" : false
+  },
   // lurjama
   {
     "start" : "",
@@ -86,6 +164,32 @@ const gameData = [
       "Võõrlesime",
       "Jössisime",
       "Lüürisime"
+    ],
+    "itemFound" : false
+  },
+  // lurnidus
+  {
+    "start" : "Tema ",
+    "aavik" : "lurnidus",
+    "end" : " hämmastas meid kõiki.",
+    "translation" : "silmakirjalikkus",
+    "options" : [
+      "veeritus",
+      "palnidus",
+      "püritus"
+    ],
+    "itemFound" : false
+  },
+  // nantma
+  {
+    "start" : "Nõukogude Liit ",
+    "aavik" : "nantis",
+    "end" : " Eesti 1940. aastal.",
+    "translation" : "okupeeris",
+    "options" : [
+      "kähmas",
+      "võntis",
+      "räätis"
     ],
     "itemFound" : false
   },
@@ -102,9 +206,35 @@ const gameData = [
     ],
     "itemFound" : false
   },
+  // neiris
+  {
+    "start" : "Ta oli üsna ",
+    "aavik" : "neiris",
+    "end" : " tekstülesannete lahendaja.",
+    "translation" : "leidlik",
+    "options" : [
+      "heelduv",
+      "taibik",
+      "saalne"
+    ],
+    "itemFound" : false
+  },
+  // nelgem
+  {
+    "start" : "Härra Tuvike ei olnud just kõige ",
+    "aavik" : "nelgem",
+    "end" : " õpetaja.",
+    "translation" : "leebem",
+    "options" : [
+      "moobem",
+      "paldim",
+      "häävim"
+    ],
+    "itemFound" : false
+  },
   // nõmik
   {
-    "start" : "Kes ei õpi, jääb ",
+    "start" : "Kes ei õpi, jääbki ",
     "aavik" : "nõmikuks",
     "end" : ".",
     "translation" : "harimatuks",
@@ -112,6 +242,45 @@ const gameData = [
       "nürmikuks",
       "tümmiks",
       "pürmiks"
+    ],
+    "itemFound" : false
+  },
+  // nyymukas
+  {
+    "start" : "",
+    "aavik" : "Nüümuka",
+    "end" : " näitleja saabumine pani kogu linna kihama.",
+    "translation" : "Kuulsa",
+    "options" : [
+      "Poorika",
+      "Faamika",
+      "Pülmika"
+    ],
+    "itemFound" : false
+  },
+  // paaldama
+  {
+    "start" : "Minister ",
+    "aavik" : "paaldas",
+    "end" : " oma kunagist seotust tsirkusega.",
+    "translation" : "tunnistas avalikult",
+    "options" : [
+      "namitas",
+      "konveeris",
+      "teemis"
+    ],
+    "itemFound" : false
+  },
+  // plaperdamine
+  {
+    "start" : "Tänavalt kostev vanamuttide ",
+    "aavik" : "plaperdamine",
+    "end" : " äratas mind juba enne kaheksat.",
+    "translation" : "lobisemine",
+    "options" : [
+      "päbardamine",
+      "kludistamine",
+      "pädisemine"
     ],
     "itemFound" : false
   },
@@ -141,7 +310,32 @@ const gameData = [
     ],
     "itemFound" : false
   },
-
+  // raitisin
+  {
+    "start" : "",
+    "aavik" : "Raitisin",
+    "end" : " sõidueksami juba kaheksandal korral.",
+    "translation" : "Sooritasin",
+    "options" : [
+      "Elbisin",
+      "Supeerisin",
+      "Mältisin"
+    ],
+    "itemFound" : false
+  },
+  // roinis
+  {
+    "start" : "Torumehe suuvärk oli nii ",
+    "aavik" : "roinis",
+    "end" : ", et proua Kask peaaegu minestas.",
+    "translation" : "ropp",
+    "options" : [
+      "rüüv",
+      "rämar",
+      "võher"
+    ],
+    "itemFound" : false
+  },
   // rümu, rümud
   {
     "start" : "Eesti keele õpetaja kohta ringles igasugu ",
@@ -181,6 +375,19 @@ const gameData = [
     ],
     "itemFound" : false
   },
+  // teinima
+  {
+    "start" : "Inspektor ",
+    "aavik" : "teinis",
+    "end" : " kadunukese juurest leitud dokumente.",
+    "translation" : "uuris hoolikalt",
+    "options" : [
+      "pingis",
+      "täppis",
+      "kiikis"
+    ],
+    "itemFound" : false
+  },
   // umm
   {
     "start" : "Meie ",
@@ -207,6 +414,19 @@ const gameData = [
     ],
     "itemFound" : false
   },
+  // vesmima
+  {
+    "start" : "Palun ",
+    "aavik" : "vesmige",
+    "end" : " sellest kindlasti ka oma vanemaid.",
+    "translation" : "informeerige",
+    "options" : [
+      "täävitage",
+      "viirake",
+      "stüüvige"
+    ],
+    "itemFound" : false
+  },
   // välmingud
   {
     "start" : "Paljud ",
@@ -223,13 +443,26 @@ const gameData = [
   // vüün, vüünu, vüünu
   {
     "start" : "Ma ei ole juba kaks ",
-    "aavik" : "vüünu",
+    "aavik" : "vyynu",
     "end" : " maganud.",
     "translation" : "ööpäeva",
     "options" : [
       "ööpsi",
       "päevakut",
       "pöövi"
+    ],
+    "itemFound" : false
+  },
+  // õst
+  {
+    "start" : "Madruste ",
+    "aavik" : "õst",
+    "end" : " kestis juba teist nädalat.",
+    "translation" : "vastuhakk",
+    "options" : [
+      "klõmming",
+      "värdmine",
+      "rigoot"
     ],
     "itemFound" : false
   },
@@ -242,7 +475,7 @@ const gameData = [
     "options" : [
       "nüttinud",
       "pääbutanud",
-      "hüllanud"
+      "hyllanud"
     ],
     "itemFound" : false
   }
