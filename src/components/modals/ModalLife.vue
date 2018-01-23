@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <h1>JohannesAaviku elukäik</h1>
+    <h1>Johannes Aaviku elukäik</h1>
 
     <h2>Lühidalt:</h2>
     <p><b>Johannes Aavik</b> on Saaremaalt pärit tõlkija, õpetaja, kirjastaja, kirjanik, kirjandus- ja teatrikriitik, keeleteadlane ja keeleuuendaja. <b>Tähelepanuväärseim ongi Aaviku roll eesti keele uuendaja ja iseäranis uute sõnade väljamõtlejana.</b></p>
@@ -14,7 +14,7 @@
     <p>Johannes Aavik sündis 1880. aastal Saaremaal Pöide kihelkonnas Randvere külas vallakirjutaja pojana. Kooliteed alustas väike Johannes aga juba 1888. aastal Kuressaares, elades vanematekodust eemal onu juures, kes oli linnas üsna heal järjel kaupmees.</p>
 
     <img class="nkl-img--framed nkl-modal__img nkl-modal__img--right nkl-modal__img--rotateR" alt="Johannes Aavik gümnasistina" src="../../assets/content/aavik-gymnasistina.jpg" />
-    <p>Kõigepealt õppis Johannes väikelaste- ehk “supikoolis”, seejärel Laurentiuse koguduse kihelkonnakoolis ja vene õppekeelega Reutzi elementaarkoolis. Alates 1894. aastast õppis ta Kuressaare gümnaasiumis, kus tol ajal käis õppetöö samuti vene keeles. 1890. aastate keskel tulid ka Johannese vanemad ja õed-vennad Kuressaarde, kuhu Johannese onu ostis neile maja. Tänapäeval asub seal Aavikute majamuuseum.</p>
+    <p>Kõigepealt õppis Johannes väikelaste- ehk “supikoolis”, seejärel Laurentiuse koguduse kihelkonna&shy;koolis ja vene õppekeelega Reutzi elementaar&shy;koolis. Alates 1894. aastast õppis ta Kuressaare gümnaasiumis, kus tol ajal käis õppetöö samuti vene keeles. 1890. aastate keskel tulid ka Johannese vanemad ja õed-vennad Kuressaarde, kuhu Johannese onu ostis neile maja. Tänapäeval asub seal Aavikute majamuuseum.</p>
 
     <p>Juba õpilasena tundis Johannes erilist huvi keelte vastu. Lisaks koolis õpetatud vene, saksa, ladina, kreeka ja prantsuse keelele õppis Aavik iseseisvalt juurde soome ja inglise keelt. Kogu hilisema elu oli ta iseäranis võlutud <b>prantsuse keelest ja mõttelaadist.</b></p>
 
@@ -58,8 +58,8 @@
     <h3>Tartu. „Postimees“ ja Kommertskool</h3>
     
     <img class="nkl-img--framed nkl-modal__img nkl-modal__img--right nkl-modal__img--rotateR" alt="Aaviku toimetatud Keeleline kuukiri" src="../../assets/content/keeleline-kuukiri_1915.jpg" />
-    <p>1912. aasta lõpus siirdus Aavik tagasi Tartusse (“...igatsen intelligendimat õhkkonda…”), kus töötas „Postimehes“ peamiselt teatrikriitikuna ja Tartu kommertskoolis eesti, ladina ja prantsuse keele õpetajana. Ka tol ajal ei õpetatud koolis reeglina veel üldse eesti keelt. Aavik, olles küll prantsuse keele õpetaja, püüdis tundides gümnasiste siiski ka eesti keele probleemide üle mõtlema panna. Lisaks õpetas ta keelehuvilistele õpilastele kord nädalas poolsalajastel kohtumistel eraviisiliselt eesti keelt ja tutvustas oma keeleuuenduslikke põhimõtteid. </p>
-    <p>Sel perioodil üllitas Aavik palju artikleid, kus tutvustas oma keeleuuenduslikke põhimõtteid ka laiemalt. Ta ideed leiavad nii toetajaid (eriti noorte seas), aga paraku ka hulgaliselt vastaseid, peamiselt ülikooli akadeemilisemates ringkondades. Šokeerivaim on paljude jaoks sõnade kunstliku loomise meetod, ent Aavik ei lase end vastastest häirida, vaid töötab keeleuuendusega aktiivselt edasi. Eriti vaimustuses oli ta sellest, et tuntumad kirjanikud nagu Vilde, Tuglas, Metsanurk jt hakkasid tasapisi uuendatud kirjakeelt oma teostes tarvitama.</p>
+    <p>1912. aasta lõpus siirdus Aavik tagasi Tartusse (“...igatsen intelligendimat õhkkonda…”), kus töötas „Postimehes“ peamiselt teatri&shy;kriitikuna ja Tartu kommerts&shy;koolis eesti, ladina ja prantsuse keele õpetajana. Ka tol ajal ei õpetatud koolis reeglina veel üldse eesti keelt. Aavik, olles küll prantsuse keele õpetaja, püüdis tundides gümnasiste siiski ka eesti keele probleemide üle mõtlema panna. Lisaks õpetas ta keelehuvilistele õpilastele kord nädalas pool&shy;salajastel kohtumistel era&shy;viisiliselt eesti keelt ja tutvustas oma keele&shy;uuenduslikke põhimõtteid. </p>
+    <p>Sel perioodil üllitas Aavik palju artikleid, kus tutvustas oma keele&shy;uuenduslikke põhimõtteid ka laiemalt. Ta ideed leiavad nii toetajaid (eriti noorte seas), aga paraku ka hulgaliselt vastaseid, peamiselt ülikooli akadeemi&shy;lisemates ringkondades. Šokeerivaim on paljude jaoks sõnade kunstliku loomise meetod, ent Aavik ei lase end vastastest häirida, vaid töötab keele&shy;uuendusega aktiivselt edasi. Eriti vaimustuses oli ta sellest, et tuntumad kirjanikud nagu Vilde, Tuglas, Metsanurk jt hakkasid tasapisi uuendatud kirjakeelt oma teostes tarvitama.</p>
     
     <h3>“Reform” ja “Istandus”</h3>
      <img class="nkl-img--framed nkl-modal__img--bigger nkl-modal__img--right nkl-modal__img--rotateR" alt="Aaviku kirjastuse märk" src="../../assets/content/kirjastuse-m2rk.jpg" />
@@ -87,7 +87,7 @@
 
     <h3>Abielu. Ja biifsteek mädarõikaga.</h3>
 
-    <img class="nkl-img--framed nkl-modal__img nkl-modal__img--right nkl-modal__img--rotateR" src="../../assets/content/aleksandra-aavik.jpg" />
+    <img class="nkl-img--framed nkl-modal__img nkl-modal__img--right nkl-modal__img--rotateR" src="../../assets/content/aleksandra-aavik.jpg" alt="Abikaasa Aleksandra" />
     <p>1929. aastal abiellus Johannes Aavik oma endise Tartu Tütarlaste&shy;gümnaasiumi õpilase <b>Aleksandra Kleemanniga</b>, kes oli Johannesest pea 30 aastat noorem. Samal aastal astus Aleksandra Tartu Ülikooli eesti keelt ja kirjandust õppima – ka temast sai hiljem eesti keele õpetaja. Tõsi, abikaasa õppe&shy;meetoditega ei ole Johannes ise mitte alati päri – oma hilisemas päevikus “Ideepe” on ta kirjutanud lausa seda, et kui tal oleks piisavalt “voli ja võimu käes”, võtaks ta Aleksandralt õpetamise õiguse sootuks ära. Loodetavasti polnud asi siiski nii hull ja selle pahameele&shy;purske põhjustas pigem näiteks proua poolt kogemata riiulis valesse kohta tagasi pandud raamat või valel temperatuuril serveeritud õlu. Selliste asjadega nalja polnud.</p>
     <p>Aavik polnud küll eriline alkoholi&shy;tarbija, aga õlut nautis ta aeg-ajalt siiski. Kui keegi seda siis kogemata liiga soojalt või vale kujuga klaasist juhtus pakkuma, oli pahandus käes. Või siis biifsteek mädarõikaga, mida Aavik olevat restorani “Du Nord” külastades alatasa tellinud, ise iga kord süües toitu teravalt kritiseerides. Nii nagu keele alal, tundusid Aavikul ka elus olevat väga kindlad seisukohad ja põhimõtted. Muidugi võis Aaviku meelest ka teistel olla oma arvamus – asi oli selles, et enamasti oli tema enda arvamus lihtsalt natuke veel õigem. Või siis vähemalt “peenem, elegandim”.</p>
 
@@ -97,9 +97,10 @@
 
     <p>1934. aastal määrati Aavik valitsuse otsusega Haridusministeeriumi juurde haridusnõunikuks (koolide inspektoriks). Uue ametiga seoses pidi ta kolima Tallinna.</p>
 
-    <p>Kangeima “keele-revolutsionääri” ja võitleja töötamine ministeeriumis ning tema poolt ametlike õpikute väljaandmine tähendas ilmselt seda, et kõvemad keeleuuenduse-lahingud olid möödas. See ei tähenda samas sugugi Aaviku lüüasaamist, pigem olid arusaamad selleks ajaks ühtlustunud – paljud Aaviku grammatika-alased ettepanekud ja uued sõnad olid juba igapäevasesse keelepruuki jõudnud. Ja teiselt poolt – ka Aavik ise oli loobunud mõnedest radikaalsematest uuendustest, mis kohe kuidagi ei tahtnud kasutusele minna. Teatavat rahunemist tähistas ilmselt ka see, et 1937. aastal valis Akadeemiline Emakeele Selts Johannes Aaviku oma auliikmeks.</p>
+    <img class="nkl-img--framed nkl-modal__img nkl-modal__img--left nkl-modal__img--rotateL" alt="Aavik 30-ndatel" src="../../assets/content/aavik-1930.jpg" />
+    <p>Kangeima “keele-revolutsio&shy;nääri” ja võitleja töötamine ministeeriumis ning tema poolt ametlike õpikute välja&shy;andmine tähendas ilmselt seda, et kõvemad keele&shy;uuenduse-lahingud olid möödas. See ei tähenda samas sugugi Aaviku lüüasaamist, pigem olid arusaamad selleks ajaks ühtlustunud – paljud Aaviku grammatika-alased ettepanekud ja uued sõnad olid juba iga&shy;päevasesse keelepruuki jõudnud. Ja teiselt poolt – ka Aavik ise oli loobunud mõnedest radikaalse&shy;matest uuendustest, mis kohe kuidagi ei tahtnud kasutusele minna. Teatavat rahunemist tähistas ilmselt ka see, et 1937. aastal valis Akadeemiline Emakeele Selts Johannes Aaviku oma auliikmeks.</p>
 
-    <p>Ometi ei jäänud keeleküsimused ja tõlkimine unarusse ka sel perioodil. 1936 avaldas Aavik suurteose “Eesti õigekeelsuse õpik ja grammatika”, mis oli esimene sedavõrd mahukas ja põhjalik õpik. Lisaks mitmed tõlked, brošüürid, artiklid. </p>
+    <p>Ometi ei jäänud keele&shy;küsimused ja tõlkimine unarusse ka sel perioodil. 1936 avaldas Aavik suurteose “Eesti õigekeelsuse õpik ja grammatika”, mis oli esimene sedavõrd mahukas ja põhjalik õpik. Lisaks mitmed tõlked, brošüürid, artiklid. </p>
 
     <p>Elades sel perioodil Tartus ja Tallinnas ei katke sidemed kodusaarega – peaaegu igal aastal suvitab Aavik Saaremaal. </p>
     
@@ -118,7 +119,7 @@
     <p>Esialgu peatuti Uppsalas, aga 1946. aastal siirduti Stockholmi, kuhu jäädigi elama. </p>
     <p>Johannes Aavik käis sel ajal seitsmendat aastakümmet, aga fanaatiline keeleuuendaja jäi endale truuks ka täiesti uues riigis ja täiesti uues keskkonnas: peagi hakkasid välis-eesti ajalehtedes ilmuma Aaviku keelenurgad ja artiklid. Aavik õpetab, Aavik esineb loengutega – ja muidugi – Aavik mõtleb välja uusi sõnu!</p>
 
-    <img class="nkl-img--framed nkl-modal__img--bigger nkl-modal__img--left nkl-modal__img--rotateL" src="../../assets/content/70-juubel.jpg" />
+    <img class="nkl-img--framed nkl-modal__img--bigger nkl-modal__img--left nkl-modal__img--rotateL" alt="Aaviku 70. juubel Rootsis" src="../../assets/content/70-juubel.jpg" />
     <p>Jätkus ka pidev ilukirjanduse tõlkimine, näiteks Mika Valtari mitu romaani. Samuti aitas Aavik <b>Paul Saagpakul</b> kokku panna suurt eesti–inglise sõnaraamatut, mida kasutatakse tänapäevani.</p>
 
     <p>Aavik oli juba 1924. aastal postuleerinud: “Keeleuuenduse kurv tuleb lõpmattuseni tõmmata!, olles terve oma pika elatud elu ise selle põhimõtte värvikaimaks eeskujuks.</p>

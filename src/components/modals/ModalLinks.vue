@@ -17,7 +17,7 @@
             <dt>
                 <b>Hetk ajaloos. Ideaalne tuba.</b>
                 <br>
-                ERR-i sarja "Hetk ajaloos" 24. osas on peategelaseks Johannes Aavik.
+                ERR-i sarja "Hetk ajaloos" 24. osas on pea&shy;tegelaseks Johannes Aavik.
             </dt>
             <dd>
                 <a class="nkl-button nkl-button--small" href="http://arhiiv.err.ee/guid/20170831175217201000300112290E2BA238B440000005260B00000D0F011049" target="_blank">Vaata</a>

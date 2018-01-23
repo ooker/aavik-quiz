@@ -114,7 +114,7 @@
     // flex-direction: column;
     // //justify-content: center;
     // align-items: flex-start;
-    padding: 3vh 9vw 3vh 8vw;
+    padding: 3vh 10% 3vh 10%;
   }
 
   .nkl-modal__close {
@@ -144,7 +144,7 @@
 
   @include mq-l-landscape {
     .nkl-modal__content > div {
-      padding: 3vh 5vw 10vh 3.5vw;
+      padding: 3vh 10% 10vh 10%;
 
       h1 {
         font-size: 3vw;

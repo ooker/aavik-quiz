@@ -7,7 +7,7 @@
         <h2>Sul õnnestus koguda {{gameScore}} punkti {{gameLength*gameBonus}}-st võimalikust.</h2>
 
         <hr style="width: 100%;" />
-        <a class="nkl-button nkl-gameover__button" @click="playAgain">Jaga Facebookis</a>
+        <a class="nkl-button nkl-gameover__button" @click="shareToFB">Jaga Facebookis</a>
         <hr style="width: 100%;" />
 
         <a class="nkl-back nkl-gameover__back" @click="playAgain">mängi uuesti</a>
@@ -41,10 +41,12 @@
       },
       shareToFB() {
         FB.shareMyScore({
-          link: 'http://polygon.onkel.ee/saaremaailm/aavik/',
-          image: 'http://polygon.onkel.ee/saaremaailm/aavik/dist/FB-share.jpg',
-          caption: 'Tee järgi või tee veel paremini!',
-          description: '...ja saavutasin ' + this.finalScore + ' punkti.'
+          link: 'http://saaremaa.folklore.ee/aavik',
+          image: 'http://saaremaa.folklore.ee/aavik/FB_share.jpg',
+          title: 'Mängisin Johannes Aaviku veebimängu...',
+          description: '...ja saavutasin ' + this.gameScore + ' punkti. Proovi ka!'
+          // caption: 'Tee järgi või tee veel paremini!',
+          // 
         });
       }
     }

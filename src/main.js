@@ -1,8 +1,8 @@
 require("./assets/scss/nkl.scss");
 
 import Vue from 'vue'
-import Vuebar from 'vuebar';
-Vue.use(Vuebar);
+//import Vuebar from 'vuebar';
+//Vue.use(Vuebar);
 import App from './App.vue'
 
 
@@ -443,7 +443,7 @@ const gameData = [
   // vüün, vüünu, vüünu
   {
     "start" : "Ma ei ole juba kaks ",
-    "aavik" : "vyynu",
+    "aavik" : "vüünu",
     "end" : " maganud.",
     "translation" : "ööpäeva",
     "options" : [
@@ -528,27 +528,28 @@ new Vue({
   created(){
     window.fbAsyncInit = function() {
     FB.init({
-      appId      : '384100842040668',
+      appId      : '762974274087491',
       xfbml      : true,
       version    : 'v2.11'
     });
     FB.AppEvents.logPageView();
 
     FB.shareMyScore = function(data) {
-			FB.ui({
-				method: 'feed',
-				name: 'Mängisin Johannes Aaviku mängu...',
-				link: data.link,
-				picture: data.image,
-				caption: data.caption,
-				description: data.description
-			}, function(response) {
-				if (response && response.post_id) {
-				  //alert('Jagamine õnnestus!');
-				} else {
-					//alert('Kahjuks jagamine ei õnnestunud :)');
-				}
-			});
+      
+      FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        action_properties: JSON.stringify({
+          object: {
+            'og:url': data.link,
+            'og:title': data.title,
+            'og:description': data.description,
+            'og:image': data.image
+          }
+        })
+    },function (response) {
+      // Action after response
+    });
 		}
   };
 

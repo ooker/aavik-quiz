@@ -164,13 +164,12 @@
           >Sõnamäng</a>
       </div>
 
-      <div class="nkl-intro__sign-nav">
-          <nav>
-              <ul>
-                <a  @click="openModal('game')"><li>elu</li></a>
-              </ul>
-          </nav>
-      </div>
+      <nav class="nkl-intro__sign-nav">
+        <a class="nkl-button nkl-button--small" @click="openModal('nkl-modal-life')">elu ja töö</a>
+        <a class="nkl-button nkl-button--small" @click="openModal('nkl-modal-words')">keeleuuendus</a>
+        <a class="nkl-button nkl-button--small" @click="openModal('nkl-modal-links')">lisamaterjale</a>
+        <a class="nkl-button nkl-button--small" @click="openModal('nkl-modal-about')">projektist</a>
+      </nav>
 
     </div><!-- .nkl-intro__sign -->
 
@@ -343,6 +342,18 @@ STYLE _____________________________________________________________________
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .nkl-intro__sign-nav {
+    display: flex;
+    
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3%;
+    width: 100%;
+    a {
+      margin: 0.5vh 0;
+    }
   }
 
   .nkl-intro__texts {
