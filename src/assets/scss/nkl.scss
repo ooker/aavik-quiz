@@ -115,6 +115,10 @@ hr {
   @include mq-l {
     padding: $nkl-s $nkl-l;
     font-size: $nkl-xl;
+    &--small {
+      padding: $nkl-5xs $nkl-xxs;
+      font-size: $nkl-m;
+    }
   }
 
 }

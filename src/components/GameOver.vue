@@ -41,8 +41,8 @@
       },
       shareToFB() {
         FB.shareMyScore({
-          link: 'http://saaremaa.folklore.ee/aavik',
-          image: 'http://saaremaa.folklore.ee/aavik/FB_share.jpg',
+          link: 'http://saaremaa.folklore.ee/aavik/',
+          image: 'http://saaremaa.folklore.ee/aavik/FB_share-2.jpg',
           title: 'Mängisin Johannes Aaviku veebimängu...',
           description: '...ja saavutasin ' + this.gameScore + ' punkti. Proovi ka!'
           // caption: 'Tee järgi või tee veel paremini!',

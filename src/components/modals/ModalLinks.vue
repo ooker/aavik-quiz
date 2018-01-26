@@ -54,6 +54,18 @@
                 <a class="nkl-button nkl-button--small" href="http://arhiiv.err.ee/guid/21235" target="_blank">Kuula</a>
             </dd>
         </li>
+        <hr>
+        <li>
+            <dt>
+                <b>Ideaalne naine ja ideaalne keel. Johannes Aaviku kaks kirge</b>
+                <br>
+                Olavi Pesti artikkel Johannes Aaviku suurtest kirgedest 2014. aasta "Loomingus" 
+            </dt>
+            <dd>
+                <a class="nkl-button nkl-button--small" href="http://saaremaa.folklore.ee/aavik/lisad/aavik_pesti_looming.pdf" target="_blank">Loe</a>
+            </dd>
+        </li>
+
     </dl>
         
 

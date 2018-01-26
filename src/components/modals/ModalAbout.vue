@@ -70,6 +70,8 @@
             <p>Mištšenko, Jekaterina (2012) <a href="http://www.etera.ee/zoom/2003/view?page=1&amp;p=separate&amp;view=0,0,2550,3300" target="_blank"><i>Johannes Aavik keelekorraldajana Rootsis. Magistritöö.</i></a> </p>
             <p>Koel, Hilja (2010) <a href="https://www.leisivald.ee/wwwmain/koduvald/koduvald_201012.pdf" target="_blank"><i>Keelest ja Aavikust</i></a>, Koduvald</p>  
             <p>Naaber, Enda (2011) <a href="https://www.saartehaal.ee/2011/03/12/murdekeel-vaarikas-ta/" target="_blank"><i>Murdekeel &ndash; väärikas ta</i></a>, Saarte Hääl</p>
+            <p>Pesti, Olavi (2014) <a href="http://saaremaa.folklore.ee/aavik/lisad/aavik_pesti_looming.pdf" target="_blank"><i>Ideaalne naine ja ideaalne keel. Johannes Aaviku kaks kirge</i></a>, Looming (2/2014)</p>
+            <p>Pesti, Olavi (2014) <a href="http://saaremaa.folklore.ee/aavik/lisad/aavik_pesti_akadeemia.pdf" target="_blank"><i>Ma ei kuulu käesolevasse aegjärko</i></a>, Akadeemia (3/2014)</p>
             <p>Rattur, Ülev (2007) <a href="http://www.emakeeleselts.ee/omakeel/2007_2/OK_2007-2_07.pdf" target="_blank"><i>Keele-Aavikust</i></a>, Oma Keel</p>
             <p>Remmet, Kadri (2013) <a href="http://www.emakeeleselts.ee/yritused/Wiedemann_2013/Remmet_Wiedemann-2013.pdf" target="_blank"><i>Johannes Aavik eesti keele emotsioonisõnavara rikastajana. 100 aastat hiljem</i></a></p>
             <p>Sulbi, Raul (2010) <a href="https://kultuur.postimees.ee/354322/tana-130-aasta-eest-sundis-eesti-suurim-sonameister-johannes-aavik" target="_blank"><i>Täna 130 aasta eest sündis Eesti suurim sõnameister Johannes Aavik</i></a>, Postimees</p>
