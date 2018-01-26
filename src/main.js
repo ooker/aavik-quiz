@@ -13,9 +13,9 @@ import App from './App.vue'
 const gameData = [
   // braveerima
   {
-    "start" : "Seetõttu ",
+    "start" : "Ma ",
     "aavik" : "braveerisin",
-    "end" : " ma meelega kooli kodukorda.",
+    "end" : " meelega kooli kodukorda.",
     "translation" : "trotsisin",
     "options" : [
       "vänglesin",
@@ -54,7 +54,7 @@ const gameData = [
   {
     "start" : "Ta põrnitses ",
     "aavik" : "jallilt",
-    "end" : " nurgas kui ma teistega tantsisin.",
+    "end" : " nurgas, kui ma teistega tantsisin.",
     "translation" : "armukadedalt",
     "options" : [
       "kübedalt",
@@ -94,7 +94,7 @@ const gameData = [
     "start" : "Publiku ",
     "aavik" : "kaavitamisest",
     "end" : " oli kõvasti kasu.",
-    "translation" : "kaasa aitamisest",
+    "translation" : "kaasaaitamisest",
     "options" : [
       "hälpimisest",
       "rüldamisest",
@@ -104,7 +104,7 @@ const gameData = [
   },
   // kaulis
   {
-    "start" : "Kõik poisid olid end vaheajal ",
+    "start" : "Kõik poisid olid end koolivaheajal ",
     "aavik" : "kauliks",
     "end" : " püganud.",
     "translation" : "kiilaks",
@@ -234,7 +234,7 @@ const gameData = [
   },
   // nõmik
   {
-    "start" : "Kes ei õpi, jääbki ",
+    "start" : "Kes ei õpi, jääb ",
     "aavik" : "nõmikuks",
     "end" : ".",
     "translation" : "harimatuks",
@@ -418,7 +418,7 @@ const gameData = [
   {
     "start" : "Palun ",
     "aavik" : "vesmige",
-    "end" : " sellest kindlasti ka oma vanemaid.",
+    "end" : " sellest kindlasti oma vanemaid.",
     "translation" : "informeerige",
     "options" : [
       "täävitage",
@@ -461,7 +461,7 @@ const gameData = [
     "translation" : "vastuhakk",
     "options" : [
       "klõmming",
-      "värdmine",
+      "põmming",
       "rigoot"
     ],
     "itemFound" : false

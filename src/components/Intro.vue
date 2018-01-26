@@ -114,31 +114,15 @@
         <!-- Lingid -->
         <div class="nkl-parallax__layer nkl-intro__texts" data-depth="0.12">
           <div class="nkl-parallax__item" style="top:26%; left:5vw;">
-            <!-- <nkl-modal-launcher
-              word="elu ja töö"
-              subject="life"
-              @modalLauncherClicked="openModal"></nkl-modal-launcher> -->
               <a class="nkl-modal-launcher" @click="openModal('nkl-modal-life')">elu ja töö</a>
           </div>
           <div class="nkl-parallax__item" style="top:66%; left:34vw;">
-            <!-- <nkl-modal-launcher
-              word="Aavik isiksusena"
-              subject="person"
-              @modalLauncherClicked="openModal"></nkl-modal-launcher> -->
               <a class="nkl-modal-launcher" @click="openModal('nkl-modal-about')">projektist</a>
           </div>
           <div class="nkl-parallax__item" style="top:18%; left:38vw;">
-            <!-- <nkl-modal-launcher
-              word="sõnad"
-              subject="work"
-              @modalLauncherClicked="openModal"></nkl-modal-launcher> -->
-              <a class="nkl-modal-launcher" @click="openModal('nkl-modal-words')">sõnad</a>
+            <a class="nkl-modal-launcher" @click="openModal('nkl-modal-words')">sõnad</a>
           </div>
           <div class="nkl-parallax__item" style="top:68%; left:5vw;">
-            <!-- <nkl-modal-launcher
-              word="lisalugemist"
-              subject="links"
-              @modalLauncherClicked="openModal" ></nkl-modal-launcher> -->
               <a class="nkl-modal-launcher" @click="openModal('nkl-modal-links')">lisamaterjale</a>
           </div>
         </div>
@@ -154,7 +138,7 @@
         <h1 class="nkl-intro__sign-heading"><span>Johannes</span><span>Aavik</span></h1>
         <hr />
         <p class="nkl-intro__sign-subheading">
-        Saaremaa sõnameister (1880-1973)
+        Saarlasest sõnameister (1880-1973)
         </p>
       </div>
 

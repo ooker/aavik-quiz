@@ -3,16 +3,17 @@
 
     <h1>Pane end proovile</h1>
     <p>
-      Paljud Aaviku leiutatud sõnad tunduvad meile täna väga tuttavad &ndash; me ei tule enamasti selle pealegi, et neid kellegi väljamõeldisteks pidada. Samas on tal suur hulk vähemtuntud sõnu, mis tunduvad tänapäeval kummalised, isegi naljakad.
+      Paljud Aaviku leiutatud sõnad tunduvad meile täna väga tuttavad &ndash; me ei tule enamasti selle pealegi, et neid kellegi väljamõeldiseks pidada. Samas on tal suur hulk vähemtuntud sõnu, mis tunduvad tänapäeval kummalised, isegi naljakad.
     </p>
     <p>
-      Sa näed ühte &quot;tavalist&quot; lauset ja sama lauset, kus üks sõnadest on ära vahetatud väljamõeldud variantidega. Sinu ülesandeks on proovida nende seast just Johannes Aaviku pakutud sõna ära tunda.
+      <!-- Sa näed ühte &quot;tavalist&quot; lauset ja sama lauset, kus üks sõnadest on ära vahetatud väljamõeldud variantidega. Sinu ülesandeks on proovida nende seast just Johannes Aaviku pakutud sõna ära tunda. -->
+      Mängus näed sa lauseid, kus üks sõnadest on välja mõeldud. Sinu ülesandeks on proovida välja mõeldud sõnade seast Johannes Aaviku pakutu ära tunda. Mängida saab mitu korda, sest laused vahelduvad.
     </p>
     <p>
-      <b><i><small>NB! leiuta ka ise täiesti uusi sõnu, mis võiksid sinu meelest sinna lausetesse sobida. </small></i></b>
+      <b><i><small>NB! Leiuta ka ise uusi sõnu, mis võiksid sinu meelest mängu lausetesse sobida.</small></i></b>
     </p>
 
-    <div style="margin-top: 5vh; text-align: center;">
+    <div style="margin-top: 5vh; margin-bottom:10vh; text-align: center;">
       <a @click="openGame" class="nkl-button nkl-button--game">MÄNGIMA</a>
     </div>
 
@@ -40,7 +41,5 @@
 </script>
 
 <style scoped lang="scss">
-  .nkl-button--game {
-    margin-top: 1vh;
-  }
+  
 </style>

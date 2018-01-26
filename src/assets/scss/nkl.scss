@@ -81,10 +81,10 @@ hr {
 }
 
 .nkl-button {
-  padding: $nkl-s $nkl-l;
+  padding: $nkl-xs $nkl-m;
   text-transform: uppercase;
   color: #fff;
-  font-size: $nkl-xl;
+  font-size: $nkl-l;
   background: $nkl-green;
   border-radius: 30px;
   text-shadow: 1px 2px 2px hsla(0,0%,0%,0.5);
@@ -111,21 +111,30 @@ hr {
       box-shadow: 0 1px 3px 1px hsla(0,0%,0%,0.5);
     }
   }
+
+  @include mq-l {
+    padding: $nkl-s $nkl-l;
+    font-size: $nkl-xl;
+  }
+
 }
 
 .nkl-back {
   position: absolute;
-  top: 3vh;
-  left: 3vw;
+  top: 2vh;
+  left: 1vw;
   padding: $nkl-xxs $nkl-s;
   font-family: $font-special;
   color: $nkl-brown--dark;
-  font-size: $nkl-xxl;
+  font-size: $nkl-xl;
 
   &::before {
     content: "\21a2";
     display: inline-block;
-    margin-right: 12px;
+    margin-right: 8px;
+  }
+  @include mq-landscape {
+    font-size: $nkl-xxl;
   }
 }
 

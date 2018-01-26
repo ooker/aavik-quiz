@@ -15,8 +15,14 @@
         <small>programmist "Saarte pärimuslik kultuurikeskkond 2015-2019"</small></dd>
       </li>
       <li>
-        <dt>idee ja ehitaja</dt>
-        <dd><a href="https://www.facebook.com/MTÜ-Saaremaailm-140846182637341/" target="_blank">MTÜ Saaremaailm</a></dd>
+        <dt>idee ja ehitajad</dt>
+        <dd>
+          <a href="https://www.facebook.com/MTÜ-Saaremaailm-140846182637341/" target="_blank">MTÜ Saaremaailm</a>
+          <br>
+          <b>Merit Karise</b>, <b>Oliver Maaker</b>
+          <br>
+          <a href="mailto:saaremaailm@gmail.com" target="_blank">saaremaailm@gmail.com</a>
+        </dd>
       </li>
       <li>
         <dt>koostööpartner</dt>
@@ -29,7 +35,7 @@
           <small>Saaremaa muuseumi kultuurharidustöö osakonna juhataja</small></dd>
         <dd><b>Jaan Õispuu</b>
           <br>
-          <small>keeleteadlane, Johannes Aaviku Seltsi esimees</small>
+          <small>keeleteadlane, Johannes Aaviku Seltsi juhatuse liige</small>
         </dd>
         <dd><b>Olavi Pesti</b>
           <br>

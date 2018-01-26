@@ -3,10 +3,10 @@
 
     <h1>Valik Aaviku sõnu</h1>
     <p>
-      Siin on valik Johannes Aaviku loodud uusi tüvisõnu, aga ka teistest keeltest ning murretest laenatud sõnu, mis on sedavõrd tugevalt eesti keelde juurdunud, et kasutame neid igapäevaselt ja ei mõtle enamasti nende päritolule.
+      Siin on valik Johannes Aaviku loodud uusi tüvisõnu, eesti murretest ja teistest keeltest laenatud sõnu, mis on sedavõrd tugevalt eesti keelde juurdunud, et kasutame neid igapäevaselt ega mõtle enamasti nende päritolule.
     </p>
     <p>
-      <small>PS: Esimestena on välja toodud Saaremaa murdekeelest laenatud sõnad.</small>
+      <small>PS. Esimestena on välja toodud Saaremaa murdekeelest laenatud sõnad.</small>
     </p>
     <hr style="width: 100%; border-bottom: 1px dotted black;"  />
     <div style="column-count: 3; column-width: 150px; text-align: center;">

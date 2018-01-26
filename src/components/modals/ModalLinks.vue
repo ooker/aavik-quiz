@@ -48,7 +48,7 @@
             <dt>
                 <b>Kesköö&shy;programm. Keele&shy;uuenduse lõpmatu kurv</b>
                 <br>
-                Johannes Aaviku keele&shy;mõtetest inspi&shy;reeritud etendus Lavaka 22. lennu üliõpilaste esituses. Juhendas Anu Lamp. (Eesti Raadio, 2006)
+                Johannes Aaviku keele&shy;mõtetest inspi&shy;reeritud etendus EMTA lavakunstikooli 22. lennu üliõpilaste esituses. Juhendas Anu Lamp. (Eesti Raadio, 2006)
             </dt>
             <dd>
                 <a class="nkl-button nkl-button--small" href="http://arhiiv.err.ee/guid/21235" target="_blank">Kuula</a>
